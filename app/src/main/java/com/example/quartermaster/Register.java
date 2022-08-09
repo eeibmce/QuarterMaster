@@ -67,6 +67,7 @@ public class Register extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show()).addOnFailureListener(e -> Log.d(TAG, "onFailure: Email not sent " + e.getMessage()));
                 }
             });
+            mPassword.setText("");
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
         });
         mToLogIn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),Login.class)));

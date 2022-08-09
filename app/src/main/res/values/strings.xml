@@ -17,4 +17,8 @@
     <string name="register">Register</string>
     <string name="already_have_an_account_login_here">Already have an account? Login here</string>
     <string name="email">Email</string>
+    <string name="login_email">Login Email</string>
+    <string name="login_password">Login Password</string>
+    <string name="login">Login</string>
+    <string name="new_here_create_an_account">New Here? Create an Account</string>
 </resources>

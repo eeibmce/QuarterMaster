@@ -59,6 +59,7 @@ public class Login extends AppCompatActivity {
             fAuth.signInWithEmailAndPassword(loginemail,loginpassword).addOnCompleteListener(task -> {
                 if(task.isSuccessful()){
                     Toast.makeText(Login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
+                    mPassword.setText("");
                     startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 }else {
                     Toast.makeText(Login.this, "Error ! " + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
