@@ -1,8 +1,8 @@
 package com.example.quartermaster;
 
 import static android.content.ContentValues.TAG;
-import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -20,7 +20,6 @@ public class Register extends AppCompatActivity {
     FirebaseAuth mAuth;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +27,7 @@ public class Register extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mFullName = findViewById(R.id.FullName);
         mEmail = findViewById(R.id.Email);
-        mPassword  = findViewById(R.id.Password);
+        mPassword = findViewById(R.id.Password);
         mRegisterBtn = findViewById(R.id.RegisterBtn);
         mLoginBtn = findViewById(R.id.LoginBtn);
 
@@ -37,25 +36,25 @@ public class Register extends AppCompatActivity {
             final String email = mEmail.getText().toString().trim();
             String password = mPassword.getText().toString().trim();
 
-            if(TextUtils.isEmpty(email)){
+            if (TextUtils.isEmpty(email)) {
                 mEmail.setError("Email is Required.");
                 return;
             }
 
-            if(TextUtils.isEmpty(password)){
+            if (TextUtils.isEmpty(password)) {
                 mPassword.setError("Password is Required.");
                 return;
             }
 
-            if(password.length() < 6){
+            if (password.length() < 6) {
                 mPassword.setError("Password Must be >= 6 Characters");
                 return;
             }
 
             // register the user in firebase
 
-            mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
-                if(task.isSuccessful()){
+            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
 
                     // send verification link
                     FirebaseUser fuser = mAuth.getCurrentUser();
