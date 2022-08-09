@@ -2,24 +2,24 @@ package com.example.quartermaster;
 
 import static android.content.ContentValues.TAG;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Register extends AppCompatActivity {
     EditText mFullName, mEmail, mPassword;
     Button mRegisterBtn;
+    TextView mToLogIn;
     FirebaseAuth mAuth;
 
 
@@ -32,6 +32,7 @@ public class Register extends AppCompatActivity {
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.Password);
         mRegisterBtn = findViewById(R.id.RegisterBtn);
+        mToLogIn = findViewById(R.id.toLogIn);
 
 
         mRegisterBtn.setOnClickListener(v -> {
@@ -66,6 +67,8 @@ public class Register extends AppCompatActivity {
                 }
             });
         });
+
+        mToLogIn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),Login.class)));
     }
 }
 
