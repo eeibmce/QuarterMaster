@@ -37,27 +37,27 @@ public class Register extends AppCompatActivity {
 
         mRegisterBtn.setOnClickListener(v -> {
             //final String fullName = mFullName.getText().toString().trim();
-            final String email = mEmail.getText().toString().trim();
-            String password = mPassword.getText().toString().trim();
+            final String registeremail = mEmail.getText().toString().trim();
+            String registerpassword = mPassword.getText().toString().trim();
 
-            if (TextUtils.isEmpty(email)) {
+            if (TextUtils.isEmpty(registeremail)) {
                 mEmail.setError("Email is Required.");
                 return;
             }
 
-            if (TextUtils.isEmpty(password)) {
+            if (TextUtils.isEmpty(registerpassword)) {
                 mPassword.setError("Password is Required.");
                 return;
             }
 
-            if (password.length() < 6) {
+            if (registerpassword.length() < 6) {
                 mPassword.setError("Password Must be >= 6 Characters");
                 return;
             }
 
             // register the user in firebase
 
-            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
+            mAuth.createUserWithEmailAndPassword(registeremail, registerpassword).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
 
                     // send verification link

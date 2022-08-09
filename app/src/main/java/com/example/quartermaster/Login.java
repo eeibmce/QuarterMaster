@@ -35,20 +35,20 @@ public class Login extends AppCompatActivity {
 
         mLoginBtn.setOnClickListener(v -> {
 
-            String email = mEmail.getText().toString().trim();
-            String password = mPassword.getText().toString().trim();
+            String loginemail = mEmail.getText().toString().trim();
+            String loginpassword = mPassword.getText().toString().trim();
 
-            if(TextUtils.isEmpty(email)){
+            if(TextUtils.isEmpty(loginemail)){
                 mEmail.setError("Email is Required.");
                 return;
             }
 
-            if(TextUtils.isEmpty(password)){
+            if(TextUtils.isEmpty(loginpassword)){
                 mPassword.setError("Password is Required.");
                 return;
             }
 
-            if(password.length() < 6){
+            if(loginpassword.length() < 6){
                 mPassword.setError("Password Must be >= 6 Characters");
                 return;
             }
@@ -56,7 +56,7 @@ public class Login extends AppCompatActivity {
 
             // authenticate the user
 
-            fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
+            fAuth.signInWithEmailAndPassword(loginemail,loginpassword).addOnCompleteListener(task -> {
                 if(task.isSuccessful()){
                     Toast.makeText(Login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(),MainActivity.class));
