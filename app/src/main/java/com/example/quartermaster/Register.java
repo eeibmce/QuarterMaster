@@ -63,7 +63,8 @@ public class Register extends AppCompatActivity {
                     // send verification link
                     FirebaseUser fuser = mAuth.getCurrentUser();
                     assert fuser != null;
-                    fuser.sendEmailVerification().addOnSuccessListener(aVoid -> Toast.makeText(Register.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show()).addOnFailureListener(e -> Log.d(TAG, "onFailure: Email not sent " + e.getMessage()));
+                    fuser.sendEmailVerification().addOnSuccessListener(aVoid -> Toast.makeText(Register.this, "Verification Email Has been Sent.",
+                    Toast.LENGTH_SHORT).show()).addOnFailureListener(e -> Log.d(TAG, "onFailure: Email not sent " + e.getMessage()));
                 }
             });
         });
