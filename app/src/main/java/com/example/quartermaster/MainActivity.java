@@ -12,5 +12,3 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 }
-//Testhuihjigjklgjhkgjhk
-// testing commit location
