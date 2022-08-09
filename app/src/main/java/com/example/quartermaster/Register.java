@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Register extends AppCompatActivity {
-    EditText mFullName, mEmail, mPassword;
+    EditText mEmail, mPassword; //,mFullName;
     Button mRegisterBtn;
     TextView mToLogIn;
     FirebaseAuth mAuth;
@@ -28,7 +28,7 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         mAuth = FirebaseAuth.getInstance();
-        mFullName = findViewById(R.id.FullName);
+        //mFullName = findViewById(R.id.FullName);
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.Password);
         mRegisterBtn = findViewById(R.id.RegisterBtn);
@@ -36,7 +36,7 @@ public class Register extends AppCompatActivity {
 
 
         mRegisterBtn.setOnClickListener(v -> {
-            final String fullName = mFullName.getText().toString().trim();
+            //final String fullName = mFullName.getText().toString().trim();
             final String email = mEmail.getText().toString().trim();
             String password = mPassword.getText().toString().trim();
 
@@ -67,8 +67,8 @@ public class Register extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show()).addOnFailureListener(e -> Log.d(TAG, "onFailure: Email not sent " + e.getMessage()));
                 }
             });
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
         });
-
         mToLogIn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),Login.class)));
     }
 }
