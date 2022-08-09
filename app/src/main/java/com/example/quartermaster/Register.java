@@ -2,6 +2,7 @@ package com.example.quartermaster;
 
 import static android.content.ContentValues.TAG;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -11,12 +12,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Register extends AppCompatActivity {
     EditText mFullName, mEmail, mPassword;
-    Button mRegisterBtn, mLoginBtn;
+    Button mRegisterBtn;
     FirebaseAuth mAuth;
 
 
@@ -29,7 +32,7 @@ public class Register extends AppCompatActivity {
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.Password);
         mRegisterBtn = findViewById(R.id.RegisterBtn);
-        mLoginBtn = findViewById(R.id.LoginBtn);
+
 
         mRegisterBtn.setOnClickListener(v -> {
             final String fullName = mFullName.getText().toString().trim();
