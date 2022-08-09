@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "987200855958",
+    "project_id": "quartermaster-720e0",
+    "storage_bucket": "quartermaster-720e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987200855958:android:61a238ed8a5720ef9207b7",
+        "android_client_info": {
+          "package_name": "com.example.quartermaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987200855958-8bbghm1jnbmpvl8hlbosso8mm561lris.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwFn0OOb5FTXqgQ8nE09ppr1R0OVL0dbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987200855958-8bbghm1jnbmpvl8hlbosso8mm561lris.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
