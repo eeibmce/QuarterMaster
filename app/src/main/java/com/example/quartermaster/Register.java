@@ -55,15 +55,15 @@ public class Register extends AppCompatActivity {
 
             // register the user in firebase
 
-            fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
-                if (task.isSuccessful()) {
+            fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task1 -> {
+                if (task1.isSuccessful()) {
 
                     // send verification link
                     FirebaseUser user = fAuth.getCurrentUser();
                     assert user != null;
                     user.sendEmailVerification()
-                            .addOnCompleteListener(task1 -> {
-                                if (task1.isSuccessful()) {
+                            .addOnCompleteListener(task2 -> {
+                                if (task2.isSuccessful()) {
                                     Toast.makeText(Register.this, "Verification Email Sent", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                 } else {
