@@ -14,9 +14,11 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:autofillHints="firstname.lastname@ericsson.com"
         android:background="@color/black"
         android:ems="10"
         android:hint="@string/email"
+        android:inputType="textEmailAddress"
         android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -26,9 +28,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/FullName"
-        app:layout_constraintVertical_bias="0.0"
-        android:inputType="textEmailAddress"
-        android:autofillHints="firstname.lastname@ericsson.com" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/Password"
@@ -38,6 +38,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:autofillHints="Password"
         android:background="@color/black"
         android:ems="10"
         android:hint="@string/password"
@@ -51,8 +52,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Email"
-        app:layout_constraintVertical_bias="0.0"
-        android:autofillHints="Password" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView"
@@ -86,6 +86,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:autofillHints="Firstname Lastname"
         android:background="@color/black"
         android:ems="10"
         android:hint="@string/full_name"
@@ -99,8 +100,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.110000014"
-        android:autofillHints="Firstname Lastname" />
+        app:layout_constraintVertical_bias="0.110000014" />
 
     <Button
         android:id="@+id/RegisterBtn"

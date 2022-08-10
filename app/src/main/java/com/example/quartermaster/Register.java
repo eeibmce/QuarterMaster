@@ -1,13 +1,11 @@
 package com.example.quartermaster;
 
-import static android.content.ContentValues.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -17,18 +15,18 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Register extends AppCompatActivity {
-    EditText mEmail, mPassword; //,mFullName;
+    EditText mEmail, mPassword, mFullName;
     Button mRegisterBtn;
     TextView mToLogIn;
-    FirebaseAuth mAuth;
+    FirebaseAuth fAuth;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        mAuth = FirebaseAuth.getInstance();
-        //mFullName = findViewById(R.id.FullName);
+        fAuth = FirebaseAuth.getInstance();
+        mFullName = findViewById(R.id.FullName);
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.Password);
         mRegisterBtn = findViewById(R.id.RegisterBtn);
@@ -36,41 +34,47 @@ public class Register extends AppCompatActivity {
 
 
         mRegisterBtn.setOnClickListener(v -> {
-            //final String fullName = mFullName.getText().toString().trim();
-            final String registeremail = mEmail.getText().toString().trim();
-            String registerpassword = mPassword.getText().toString().trim();
+            final String fullName = mFullName.getText().toString().trim();
+            final String email = mEmail.getText().toString().trim();
+            String password = mPassword.getText().toString().trim();
 
-            if (TextUtils.isEmpty(registeremail)) {
+            if (TextUtils.isEmpty(email)) {
                 mEmail.setError("Email is Required.");
                 return;
             }
 
-            if (TextUtils.isEmpty(registerpassword)) {
+            if (TextUtils.isEmpty(password)) {
                 mPassword.setError("Password is Required.");
                 return;
             }
 
-            if (registerpassword.length() < 6) {
-                mPassword.setError("Password Must be >= 6 Characters");
+            if (password.length() < 6) {
+                mPassword.setError("Password must be at least 6 Characters");
                 return;
             }
 
             // register the user in firebase
 
-            mAuth.createUserWithEmailAndPassword(registeremail, registerpassword).addOnCompleteListener(task -> {
+            fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
 
                     // send verification link
-                    FirebaseUser fuser = mAuth.getCurrentUser();
-                    assert fuser != null;
-                    fuser.sendEmailVerification().addOnSuccessListener(aVoid -> Toast.makeText(Register.this, "Verification Email Has been Sent.",
-                    Toast.LENGTH_SHORT).show()).addOnFailureListener(e -> Log.d(TAG, "onFailure: Email not sent " + e.getMessage()));
+                    FirebaseUser user = fAuth.getCurrentUser();
+                    assert user != null;
+                    user.sendEmailVerification()
+                            .addOnCompleteListener(task1 -> {
+                                if (task1.isSuccessful()) {
+                                    Toast.makeText(Register.this, "Verification Email Sent", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(Register.this, "Email Verification sending failed", Toast.LENGTH_SHORT).show();
+                                }
+                            });
                 }
             });
             mPassword.setText("");
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
         });
-        mToLogIn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),Login.class)));
+        mToLogIn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), Login.class)));
     }
 }
 

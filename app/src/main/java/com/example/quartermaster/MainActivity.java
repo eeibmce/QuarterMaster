@@ -21,10 +21,22 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             Toast.makeText(MainActivity.this, "You are logged in", Toast.LENGTH_SHORT).show();
+            // Name, email address, and profile photo Url
+            String name = user.getDisplayName();
+            String email = user.getEmail();
+            //Check Email
+            boolean emailVerified = user.isEmailVerified();
+
+            // The user's ID, unique to the Firebase project. Do NOT use this value to
+            // authenticate with your backend server, if you have one. Use
+            // FirebaseUser.getIdToken() instead.
+            String uid = user.getUid();
+
         } else {
             Intent i = new Intent(getApplicationContext(), Login.class);
             startActivity(i);
         }
+
 
         mLogOutBtn = findViewById(R.id.LogoutBtn);
         mLogOutBtn.setOnClickListener(v -> {
