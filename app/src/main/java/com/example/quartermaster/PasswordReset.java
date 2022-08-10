@@ -3,6 +3,7 @@ package com.example.quartermaster;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +28,6 @@ public class PasswordReset extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
 
         mPasswordResetBtn.setOnClickListener(reset -> {
-            Toast.makeText(PasswordReset.this, "Button CLicked", Toast.LENGTH_SHORT).show();
             String email = mEmail.getText().toString();
             fAuth.sendPasswordResetEmail(email)
                     .addOnCompleteListener(task -> {
@@ -35,6 +35,8 @@ public class PasswordReset extends AppCompatActivity {
 
                         if (task.isSuccessful()) {
                             Toast.makeText(PasswordReset.this, "Password reset email sent", Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(getApplicationContext(), Login.class);
+                            startActivity(i);
                         } else {
                             Toast.makeText(PasswordReset.this, "Email failed to send", Toast.LENGTH_SHORT).show();
                         }

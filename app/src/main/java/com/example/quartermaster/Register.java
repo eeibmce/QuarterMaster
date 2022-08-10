@@ -65,14 +65,16 @@ public class Register extends AppCompatActivity {
                             .addOnCompleteListener(task1 -> {
                                 if (task1.isSuccessful()) {
                                     Toast.makeText(Register.this, "Verification Email Sent", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                 } else {
                                     Toast.makeText(Register.this, "Email Verification sending failed", Toast.LENGTH_SHORT).show();
                                 }
                             });
+                } else {
+                    Toast.makeText(Register.this, "Email already used", Toast.LENGTH_SHORT).show();
                 }
             });
             mPassword.setText("");
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
         });
         mToLogIn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), Login.class)));
     }
