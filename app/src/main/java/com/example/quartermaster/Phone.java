@@ -11,5 +11,5 @@ public class Phone {
         this.modelNumber=modelNumber;
         this.nameOwner=nameOwner;
     }
-//gytuyt
+//
 }
