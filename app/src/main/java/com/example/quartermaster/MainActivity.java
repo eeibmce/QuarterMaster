@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
-    Button mLogOutBtn;
+    Button mLogOutBtn,mToCreateBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
         mLogOutBtn.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();//logout
             finish();
+        });
+
+        mToCreateBtn = findViewById(R.id.ToCreateBtn);
+        mToCreateBtn.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(), ItemCreate.class);
+            startActivity(i);
         });
 
     }

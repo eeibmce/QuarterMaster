@@ -17,10 +17,10 @@
             android:name=".ItemCreate"
             android:exported="false" />
         <activity
-            android:name=".PhoneActivity"
+            android:name=".ActivityPhone"
             android:exported="false" />
         <activity
-            android:name=".LaptopsActivity"
+            android:name=".ActivityLaptops"
             android:exported="false" />
         <activity
             android:name=".Login"

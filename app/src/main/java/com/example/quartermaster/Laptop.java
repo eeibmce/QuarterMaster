@@ -1,25 +1,25 @@
-//package com.example.quartermaster;
-//
-//import java.util.Scanner;
-//
-//public class Laptop {
-//    private String ScreenSize, Make, Model, UUID, Processor, Weight, OperatingSystem, Battery, Owner, Storage, ModelNo, RAM;
-//
-//    public Laptop(String ScreenSize, String Make, String Model, String UUID, String Processor, String Weight, String OperatingSystem, String Battery, String RAM, String Owner, String Storage, String ModelNo) {
-//        this.ScreenSize = ScreenSize;
-//        this.Make = Make;
-//        this.Model = Model;
-//        this.UUID = UUID;
-//        this.Processor = Processor;
-//        this.Weight = Weight;
-//        this.OperatingSystem = OperatingSystem;
-//        this.Battery = Battery;
-//        this.Owner = Owner;
-//        this.Storage = Storage;
-//        this.ModelNo = ModelNo;
-//        this.RAM = RAM;
-//    }
-//
+package com.example.quartermaster;
+
+import java.util.Scanner;
+
+public class Laptop {
+    private String ScreenSize, Make, Model, UUID, Processor, Weight, OperatingSystem, Battery, Owner, Storage, ModelNo, RAM;
+
+    public Laptop(String ScreenSize, String Make, String Model, String UUID, String Processor, String Weight, String OperatingSystem, String Battery, String RAM, String Owner, String Storage, String ModelNo) {
+        this.ScreenSize = ScreenSize;
+        this.Make = Make;
+        this.Model = Model;
+        this.UUID = UUID;
+        this.Processor = Processor;
+        this.Weight = Weight;
+        this.OperatingSystem = OperatingSystem;
+        this.Battery = Battery;
+        this.Owner = Owner;
+        this.Storage = Storage;
+        this.ModelNo = ModelNo;
+        this.RAM = RAM;
+    }
+
 //    @Override
 //    public String toString() {
 //        return "Laptops{" +
@@ -36,21 +36,6 @@
 //                "ModelNo='" + ModelNo + '\'' +
 //                "RAM='" + RAM + '\'' +
 //                "}";
-//    }
-//
-//    public String getData() {
-//        return ScreenSize;
-//        return Make;
-//        return Model;
-//        return UUID;
-//        return Processor;
-//        return Weight;
-//        return OperatingSystem;
-//        return Battery;
-//        return Owner;
-//        return Storage;
-//        return ModelNo;
-//        return RAM;
 //    }
 //
 //        public String getScreenSize(){
@@ -155,11 +140,11 @@
 //        System.out.println("Storage =");
 //        String Storage = in.next();
 //    }
-//}
-//
-//
-//
-//
-//
-//
-//
+}
+
+
+
+
+
+
+

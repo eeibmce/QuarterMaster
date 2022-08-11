@@ -1,21 +1,21 @@
-//package com.example.quartermaster;
-//
-//import java.util.Scanner;
-//
-//class Phone {
-//    private String model, storage, modelNumber, brand, colour, nameOwner;
-//
-//    public Phone(String model, String storage, String modelNumber, String brand, String colour, String nameOwner) {
-//        this.model = model;
-//        this.storage = storage;
-//        this.modelNumber = modelNumber;
-//        this.brand = brand;
-//        this.colour = colour;
-//        this.nameOwner = nameOwner;
-//
-//    }
-//
-//
+package com.example.quartermaster;
+
+import java.util.Scanner;
+
+class Phone {
+    private String model, storage, modelNumber, brand, colour, nameOwner;
+
+    public Phone(String model, String storage, String modelNumber, String brand, String colour, String nameOwner) {
+        this.model = model;
+        this.storage = storage;
+        this.modelNumber = modelNumber;
+        this.brand = brand;
+        this.colour = colour;
+        this.nameOwner = nameOwner;
+
+    }
+
+
 //    @Override
 //    public String toString() {
 //        return "Phones{" +
@@ -99,4 +99,4 @@
 //        Phone iphone = new Phone(model,storage, modelNumber, brand, colour, nameOwner);
 //        System.out.print(iphone);
 //    }
-//}
+}
