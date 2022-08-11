@@ -4,14 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
-    Button mLogOutBtn;
+    Button mLogOutBtn, mToCreateBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,14 @@ public class MainActivity extends AppCompatActivity {
         mLogOutBtn.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();//logout
             finish();
+            Intent i = new Intent(getApplicationContext(), Login.class);
+            startActivity(i);
         });
 
+        mToCreateBtn = findViewById(R.id.ToCreateBtn);
+        mToCreateBtn.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(), ItemCreate.class);
+            startActivity(i);
+        });
     }
 }
