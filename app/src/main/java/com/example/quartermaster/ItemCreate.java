@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,7 +19,7 @@ import java.util.Map;
 public class ItemCreate extends AppCompatActivity {
 
     Button mCreateBtn;
-    EditText mItemType;
+    Spinner mItemType;
     FirebaseAuth fAuth;
 
     @Override
