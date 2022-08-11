@@ -133,7 +133,9 @@
         android:id="@+id/imageView"
         android:layout_width="69dp"
         android:layout_height="81dp"
-        app:srcCompat="@drawable/newlogosimplewhite"
-        tools:layout_editor_absoluteX="171dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/newlogosimplewhite" />
 </androidx.constraintlayout.widget.ConstraintLayout>
