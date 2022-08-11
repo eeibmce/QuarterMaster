@@ -3,7 +3,18 @@ package com.example.quartermaster;
 import java.util.Scanner;
 
 public class Laptop {
-    private String ScreenSize, Make, Model, UUID, Processor, Weight, OperatingSystem, Battery, Owner, Storage, ModelNo, RAM;
+    private final String ScreenSize;
+    private final String Make;
+    private final String Model;
+    private final String UUID;
+    private final String Processor;
+    private final String Weight;
+    private final String OperatingSystem;
+    private final String Battery;
+    private final String Owner;
+    private final String Storage;
+    private final String ModelNo;
+    private final String RAM;
 
     public Laptop(String ScreenSize, String Make, String Model, String UUID, String Processor, String Weight, String OperatingSystem, String Battery, String RAM, String Owner, String Storage, String ModelNo) {
         this.ScreenSize = ScreenSize;

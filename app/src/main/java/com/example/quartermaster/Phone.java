@@ -3,7 +3,12 @@ package com.example.quartermaster;
 import java.util.Scanner;
 
 class Phone {
-    private String model, storage, modelNumber, brand, colour, nameOwner;
+    private final String model;
+    private final String storage;
+    private final String modelNumber;
+    private final String brand;
+    private final String colour;
+    private final String nameOwner;
 
     public Phone(String model, String storage, String modelNumber, String brand, String colour, String nameOwner) {
         this.model = model;

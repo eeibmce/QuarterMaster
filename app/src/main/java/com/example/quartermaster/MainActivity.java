@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
-    Button mLogOutBtn,mToCreateBtn;
+    Button mLogOutBtn, mToCreateBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
