@@ -25,14 +25,17 @@ public class ItemCreate extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_create);
+
+        //Declarations
         fAuth = FirebaseAuth.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         mCreateBtn = findViewById(R.id.CreateBtn);
         mItemType = findViewById(R.id.ItemType);
+
         mCreateBtn.setOnClickListener(v -> {
             String itemType = mItemType.getText().toString().trim();
-
+            // Checks that item is elected
             if (TextUtils.isEmpty(itemType)) {
                 mItemType.setError("ItemType is Required.");
                 return;
@@ -40,7 +43,7 @@ public class ItemCreate extends AppCompatActivity {
             // Get email
             assert user != null;
             String email = ((FirebaseUser) user).getEmail();
-
+            //Adding categories to item on firestore
             Map<String, String> item = new HashMap<>();
             item.put("ItemType", itemType);
             item.put("OwnerEmail", email);
@@ -54,6 +57,6 @@ public class ItemCreate extends AppCompatActivity {
                     .addOnFailureListener(e ->
                             Toast.makeText(ItemCreate.this, "Item could not be added", Toast.LENGTH_SHORT).show()
                     );
-            });
+        });
     }
 }
