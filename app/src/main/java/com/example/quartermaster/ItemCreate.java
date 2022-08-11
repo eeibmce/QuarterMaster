@@ -2,10 +2,11 @@ package com.example.quartermaster;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -34,11 +35,16 @@ public class ItemCreate extends AppCompatActivity {
         mCreateBtn = findViewById(R.id.CreateBtn);
         mItemType = findViewById(R.id.ItemType);
 
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<>(ItemCreate.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.ListofItems));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mItemType.setAdapter(myAdapter);
+
         mCreateBtn.setOnClickListener(v -> {
-            String itemType = mItemType.getText().toString().trim();
+            String itemType = mItemType.getSelectedItem().toString();
             // Checks that item is elected
             if (TextUtils.isEmpty(itemType)) {
-                mItemType.setError("ItemType is Required.");
+                Toast.makeText(ItemCreate.this, "Must Select ItemType", Toast.LENGTH_SHORT).show();
                 return;
             }
             // Get email
@@ -52,12 +58,14 @@ public class ItemCreate extends AppCompatActivity {
             // Add a new document with a generated ID
             db.collection("Items")
                     .add(item)
-                    .addOnSuccessListener(documentReference ->
-                            Toast.makeText(ItemCreate.this, "Item successfully added", Toast.LENGTH_SHORT).show()
-                    )
-                    .addOnFailureListener(e ->
-                            Toast.makeText(ItemCreate.this, "Item could not be added", Toast.LENGTH_SHORT).show()
-                    );
+                    .addOnSuccessListener(documentReference -> {
+                        Toast.makeText(ItemCreate.this, "Item successfully added", Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(i);
+                    })
+                    .addOnFailureListener(e -> {
+                        Toast.makeText(ItemCreate.this, "Item could not be added", Toast.LENGTH_SHORT).show();
+                    });
         });
     }
 }

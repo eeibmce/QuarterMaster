@@ -53,10 +53,5 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(getApplicationContext(), ItemCreate.class);
             startActivity(i);
         });
-        Spinner mySpinner =(Spinner) findViewById(R.id.ItemType);
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.ListofItems));
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mySpinner.setAdapter(myAdapter);
     }
 }
