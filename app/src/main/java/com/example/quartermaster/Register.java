@@ -71,7 +71,7 @@ public class Register extends AppCompatActivity {
                                 }
                             });
                 } else {
-                    Toast.makeText(Register.this, "Email already used", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "Invalid Email, May be already registered", Toast.LENGTH_SHORT).show();
                 }
             });
             // Blank password so it cannot be revealed on return to page
