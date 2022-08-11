@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".Register">
 
     <EditText
@@ -15,7 +16,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:autofillHints="firstname.lastname@ericsson.com"
-        android:background="@color/black"
+        android:background="#2D2D2D"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
@@ -39,7 +40,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:autofillHints="Password"
-        android:background="@color/black"
+        android:background="#2D2D2D"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -60,7 +61,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="112dp"
         android:text="@string/app_name"
-        android:textColor="#0082F0"
+        android:textColor="#FFFFFF"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/create_new_account"
-        android:textColor="#0082F0"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -87,7 +88,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:autofillHints="Firstname Lastname"
-        android:background="@color/black"
+        android:background="#2D2D2D"
         android:ems="10"
         android:hint="@string/full_name"
         android:inputType="textPersonName"
@@ -109,6 +110,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#808080"
         android:text="@string/register_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -120,9 +122,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="#120808"
         android:text="@string/already_have_an_account_login_here"
         android:textColor="#0082F0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RegisterBtn" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="69dp"
+        android:layout_height="81dp"
+        app:srcCompat="@drawable/newlogosimplewhite"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
