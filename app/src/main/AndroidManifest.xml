@@ -17,12 +17,6 @@
             android:name=".ItemCreate"
             android:exported="false" />
         <activity
-            android:name=".ActivityPhone"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityLaptops"
-            android:exported="false" />
-        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
