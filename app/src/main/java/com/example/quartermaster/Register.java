@@ -32,7 +32,7 @@ public class Register extends AppCompatActivity {
         mRegisterBtn = findViewById(R.id.RegisterBtn);
         mToLogIn = findViewById(R.id.toLogIn);
 
-
+        // When register button is clicked
         mRegisterBtn.setOnClickListener(v -> {
             final String fullName = mFullName.getText().toString().trim();
             final String email = mEmail.getText().toString().trim();
@@ -74,8 +74,10 @@ public class Register extends AppCompatActivity {
                     Toast.makeText(Register.this, "Email already used", Toast.LENGTH_SHORT).show();
                 }
             });
+            // Blank password so it cannot be revealed on return to page
             mPassword.setText("");
         });
+        // Link to login page
         mToLogIn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), Login.class)));
     }
 }

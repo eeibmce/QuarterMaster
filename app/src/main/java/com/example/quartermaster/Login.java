@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
         mToRegister = findViewById(R.id.toRegister);
         mToResetPassword = findViewById((R.id.toPasswordReset));
 
-
+        // When login button is pressed
         mLoginBtn.setOnClickListener(v -> {
 
             String email = mEmail.getText().toString().trim();
@@ -70,9 +70,9 @@ public class Login extends AppCompatActivity {
             });
 
         });
-
+        //Link to register page
         mToRegister.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), Register.class)));
-
+        // Link to password reset
         mToResetPassword.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), PasswordReset.class)));
 
     }

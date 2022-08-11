@@ -26,18 +26,17 @@ public class PasswordReset extends AppCompatActivity {
         mEmail = findViewById(R.id.Email);
         mPasswordResetBtn = findViewById(R.id.PasswordReset);
         fAuth = FirebaseAuth.getInstance();
-
+        // When button is clicked
         mPasswordResetBtn.setOnClickListener(task1 -> {
             String email = mEmail.getText().toString();
             fAuth.sendPasswordResetEmail(email).addOnCompleteListener(task2 -> {
-                //task2.getResult();
 
                 if (task2.isSuccessful()) {
                     Toast.makeText(PasswordReset.this, "Password reset email sent", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(getApplicationContext(), Login.class);
                     startActivity(i);
                 } else {
-                    Toast.makeText(PasswordReset.this, "Email failed to send, likely used", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PasswordReset.this, "Email failed to send, Email probably not registered", Toast.LENGTH_SHORT).show();
                 }
             });
         });
