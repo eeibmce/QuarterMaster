@@ -2,9 +2,9 @@ package com.example.quartermaster;
 
 import java.util.Scanner;
 
-public class Laptops {
+public class Laptop {
     private String ScreenSize, Make, Model, UUID, Processor, Weight, OperatingSystem, Battery,Owner, Storage, ModelNo, RAM;
-    public Laptops(String ScreenSize, String Make, String Model,String UUID, String Processor, String Weight, String OperatingSystem, String Battery, String RAM, String Owner, String Storage, String ModelNo) {
+    public Laptop(String ScreenSize, String Make, String Model, String UUID, String Processor, String Weight, String OperatingSystem, String Battery, String RAM, String Owner, String Storage, String ModelNo) {
         this.ScreenSize =ScreenSize;
         this.Make = Make;
         this.Model = Model;
