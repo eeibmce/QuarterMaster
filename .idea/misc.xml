@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/ESPAAIR/Documents/GitHub/QuarterMaster/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/ESPAAIR/Documents/GitHub/QuarterMaster/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/ESPAAIR/Documents/GitHub/QuarterMaster/app/src/main/res/layout/activity_home_page.xml" value="0.36666666666666664" />
@@ -15,11 +16,13 @@
         <entry key="..\:/Users/ESPAAIR/Documents/GitHub/QuarterMaster/app/src/main/res/layout/activity_register.xml" value="0.1259259259259259" />
         <entry key="..\:/Users/ESPAAIR/Documents/GitHub/QuarterMaster/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/ESPAAIR/Documents/GitHub/QuarterMaster/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+=======
+>>>>>>> 13e7f0481259561da63f483bf22c7f39b5e72cc6
         <entry key="..\:/Users/ekocjos/Documents/Github/QuarterMaster/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1785" />
         <entry key="..\:/Users/ekocjos/Documents/Github/QuarterMaster/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1785" />
         <entry key="..\:/Users/ekocjos/Documents/Github/QuarterMaster/app/src/main/res/layout/Home-Page.xml" value="0.1796875" />
-        <entry key="..\:/Users/ekocjos/Documents/Github/QuarterMaster/app/src/main/res/layout/activity_home_page.xml" value="0.1796875" />
-        <entry key="..\:/Users/ekocjos/Documents/Github/QuarterMaster/app/src/main/res/layout/activity_item_create.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/ekocjos/Documents/Github/QuarterMaster/app/src/main/res/layout/activity_home_page.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/ekocjos/Documents/Github/QuarterMaster/app/src/main/res/layout/activity_item_create.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/ekocjos/Documents/Github/QuarterMaster/app/src/main/res/layout/activity_laptop_registration.xml" value="0.1" />
         <entry key="..\:/Users/ekocjos/Documents/Github/QuarterMaster/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/ekocjos/Documents/Github/QuarterMaster/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
