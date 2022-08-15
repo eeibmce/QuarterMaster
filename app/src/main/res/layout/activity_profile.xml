@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000"
+    tools:context=".profile">
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:background="#000000"
+        android:text="Email:"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="64dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="682dp"
+        android:backgroundTint="#2D2D2D"
+        android:drawableTop="@drawable/previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="-8dp" />
+
+    <Button
+        android:id="@+id/devices"
+        android:layout_width="128"
+        android:layout_height="64"
+        android:backgroundTint="#0082F0"
+        android:text="Devices"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="157dp"
+        android:layout_height="125dp"
+        app:srcCompat="@drawable/profileuser"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/newlogosimplewhite"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="497dp" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/quartermaster"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="646dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
