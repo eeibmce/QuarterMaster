@@ -3,28 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1275" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/drawable/bg_blue.xml" value="0.124" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/drawable/bg_menu.xml" value="0.1415" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1275" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/layout/Home-Page.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/layout/activity_home_page.xml" value="0.2" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/layout/activity_home_pageqm.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/layout/activity_item_create.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/layout/activity_password_reset.xml" value="0.22552083333333334" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/layout/activity_register.xml" value="0.22552083333333334" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/layout/content_home_pageqm.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/layout/fragment_first.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ESPAAIR/AndroidStudioProjects/QuarterMaster/app/src/main/res/layout/fragment_second.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ekocjos/Documents/Github/QuarterMaster/app/src/main/res/layout/Home-Page.xml" value="0.1796875" />
-        <entry key="..\:/Users/ekocjos/Documents/Github/QuarterMaster/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
+        <entry key="..\:/Users/ehcehse/OneDrive - Ericsson/Documents/INFUSE/QuarterMaster/app/src/main/res/layout/Home-Page.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ehcehse/OneDrive - Ericsson/Documents/INFUSE/QuarterMaster/app/src/main/res/layout/activity_home_page.xml" value="0.16614583333333333" />
+        <entry key="..\:/Users/ehcehse/OneDrive - Ericsson/Documents/INFUSE/QuarterMaster/app/src/main/res/layout/activity_laptop_registration.xml" value="0.2" />
+        <entry key="..\:/Users/ehcehse/OneDrive - Ericsson/Documents/INFUSE/QuarterMaster/app/src/main/res/layout/activity_login.xml" value="0.24456521739130435" />
+        <entry key="..\:/Users/ehcehse/OneDrive - Ericsson/Documents/INFUSE/QuarterMaster/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
