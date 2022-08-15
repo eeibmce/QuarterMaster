@@ -29,6 +29,9 @@
             android:name=".Login"
             android:exported="false" />
         <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
             android:name=".PasswordReset"
             android:exported="false" />
         <activity

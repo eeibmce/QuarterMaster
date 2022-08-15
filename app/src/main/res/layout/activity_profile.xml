@@ -27,16 +27,18 @@
         android:id="@+id/back"
         android:layout_width="64dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="682dp"
+        android:layout_marginEnd="356dp"
+        android:layout_marginBottom="680dp"
         android:backgroundTint="#2D2D2D"
         android:drawableTop="@drawable/previous"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="-8dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/devices"
-        android:layout_width="128"
-        android:layout_height="64"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="#0082F0"
         android:text="Devices"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,24 +52,55 @@
         android:id="@+id/imageView12"
         android:layout_width="157dp"
         android:layout_height="125dp"
-        app:srcCompat="@drawable/profileuser"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="90dp" />
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profileuser" />
 
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/newlogosimplewhite"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="497dp" />
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:srcCompat="@drawable/newlogosimplewhite" />
 
     <ImageView
         android:id="@+id/imageView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/quartermaster"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="646dp" />
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13"
+        app:srcCompat="@drawable/quartermaster" />
+
+    <Button
+        android:id="@+id/ProfileLogoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0082F0"
+        android:text="Logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
