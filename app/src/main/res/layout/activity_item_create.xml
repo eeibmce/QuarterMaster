@@ -4,12 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000"
     tools:context=".ItemCreate">
 
     <Button
         android:id="@+id/CreateBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="284dp"
+        android:backgroundTint="#0082F0"
         android:text="Create Item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,9 +21,35 @@
 
     <Spinner
         android:id="@+id/ItemType"
+
         android:layout_width="341dp"
         android:layout_height="33dp"
+        android:background="#B52323"
+        android:backgroundTint="#C0C0C0  "
+        android:foregroundTint="#C8C1C1"
+        android:textColor="@color/teal_200"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="107dp" />
+        tools:layout_editor_absoluteY="318dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066"
+        app:srcCompat="@drawable/newlogosimplewhite" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/quartermaster"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="174dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
