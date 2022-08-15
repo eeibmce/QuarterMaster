@@ -12,12 +12,13 @@ import  com.google.firebase.auth.FirebaseUser;
 
 public class profile extends AppCompatActivity {
 
-    Button profileLogOutBtn;
+    Button profileLogOutBtn, back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
         View profileLogOutBtn = findViewById(R.id.ProfileLogoutBtn);
 
         profileLogOutBtn.setOnClickListener(new View.OnClickListener() {
@@ -28,6 +29,18 @@ public class profile extends AppCompatActivity {
                 finish();
                 Intent i = new Intent(getApplicationContext(), Login.class);
                 startActivity(i);
+            }
+
+        });
+
+        View mback = findViewById(R.id.back);
+
+        mback.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(getApplicationContext(), HomePage.class));
             }
 
         });
