@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".LaptopRegistration">
+
+    <EditText
+        android:id="@+id/OwnerName"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="66dp"
+        android:hint="Owner Name"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="26dp" />
+
+    <EditText
+        android:id="@+id/Make"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="66dp"
+        android:hint="Make"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OwnerName" />
+
+    <EditText
+        android:id="@+id/Model"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="66dp"
+        android:hint="Model"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndof="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Make" />
+
+    <EditText
+        android:id="@+id/UUID"
+        android:layout_width="280dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="66dp"
+        android:hint="UUID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Model"
+        app:layout_constraintTop_toBottomOf="@+id/Make" />
+
+    <EditText
+        android:id="@+id/Storage"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="66dp"
+        android:hint="Storage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Model" />
+
+    <EditText
+        android:id="@+id/RAM"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="66dp"
+        android:hint="RAM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Storage" />
+
+    <EditText
+        android:id="@+id/OperatingSystem"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="66dp"
+        android:hint="Operating System"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RAM" />
+
+    <Button
+        android:id="@+id/SAVE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginEnd="158dp"
+        android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="502dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
