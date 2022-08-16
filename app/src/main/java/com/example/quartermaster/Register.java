@@ -65,7 +65,7 @@ public class Register extends AppCompatActivity {
                             .addOnCompleteListener(task2 -> {
                                 if (task2.isSuccessful()) {
                                     Toast.makeText(Register.this, "Verification Email Sent", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                    startActivity(new Intent(getApplicationContext(), HomePage.class));
                                 } else {
                                     Toast.makeText(Register.this, "Email Verification sending failed", Toast.LENGTH_SHORT).show();
                                 }
