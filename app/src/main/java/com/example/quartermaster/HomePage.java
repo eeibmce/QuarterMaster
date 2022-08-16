@@ -54,7 +54,15 @@ public class HomePage extends AppCompatActivity {
 
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
+
+            startActivity(new Intent(getApplicationContext(),profile.class));
+
         });
+//        mprofileBtn.setOnClickListener(v -> {
+//
+//            startActivity(new Intent(getApplicationContext(),profile.class));
+//
+//        });
 
 
 
