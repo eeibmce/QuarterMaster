@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
-
     android:background="@color/black"
     tools:context=".Login">
 
@@ -64,9 +63,9 @@
         android:layout_marginTop="112dp"
         android:fontFamily="@font/ericsson"
         android:text="@string/app_name"
-        android:textStyle="bold"
         android:textColor="#0082F0"
         android:textSize="32sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,14 +77,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ericsson"
+        android:fontFamily="@font/ericsson"
         android:text="@string/login_button"
         android:textColor="#0082F0"
-        android:textSize="25sp"
-        android:fontFamily="@font/ericsson"
-        android:textStyle="bold"
-
         android:textColor="#FFFFFF"
         android:textSize="25sp"
+
+        android:textSize="25sp"
+        android:textStyle="bold"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

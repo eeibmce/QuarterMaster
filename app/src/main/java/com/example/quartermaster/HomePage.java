@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -46,27 +45,16 @@ public class HomePage extends AppCompatActivity {
 
         mitemsBtn.setOnClickListener(v -> {
 
-                startActivity(new Intent(getApplicationContext(),ItemCreate.class));
+            startActivity(new Intent(getApplicationContext(), ItemCreate.class));
 
         });
 
         mprofileBtn.setOnClickListener(v -> {
 
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-
-
-            startActivity(new Intent(getApplicationContext(),profile.class));
+            startActivity(new Intent(getApplicationContext(), profile.class));
 
         });
-//        mprofileBtn.setOnClickListener(v -> {
-//
-//            startActivity(new Intent(getApplicationContext(),profile.class));
-//
-//        });
-
-
 
 
     }
 }
-//test

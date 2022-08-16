@@ -49,7 +49,7 @@ public class ItemCreate extends AppCompatActivity {
             }
             // Get email
             assert user != null;
-            String email = ((FirebaseUser) user).getEmail();
+            String email = user.getEmail();
             //Adding categories to item on firestore
             Map<String, String> item = new HashMap<>();
             item.put("ItemType", itemType);

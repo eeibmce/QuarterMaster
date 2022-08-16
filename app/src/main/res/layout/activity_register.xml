@@ -129,8 +129,8 @@
         android:layout_marginTop="16dp"
         android:background="#120808"
         android:text="@string/already_have_an_account_login_here"
-        android:textStyle="bold"
         android:textColor="#ffff"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RegisterBtn" />
