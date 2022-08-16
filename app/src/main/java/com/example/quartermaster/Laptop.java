@@ -1,7 +1,5 @@
 package com.example.quartermaster;
 
-import java.util.Scanner;
-
 public class Laptop {
     private final String ScreenSize;
     private final String Make;

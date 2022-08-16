@@ -37,4 +37,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="owner_name">Owner Name</string>
     <string name="make">Make</string>
+    <string name="logo">Logo</string>
+    <string name="name">Name</string>
 </resources>

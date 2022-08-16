@@ -12,15 +12,18 @@
         android:id="@+id/OwnerName"
         android:layout_width="280dp"
         android:layout_height="40dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="66dp"
         android:fontFamily="@font/ericsson"
         android:hint="Owner Name"
         android:text=""
         android:textColorHint="@color/white"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
     <EditText
         android:id="@+id/Make"
@@ -31,6 +34,7 @@
         android:layout_marginEnd="66dp"
         android:hint="Make"
         android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/OwnerName" />
 
@@ -45,6 +49,7 @@
         android:hint="Model:"
         android:textColorHint="@color/white"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Make" />
 
@@ -56,6 +61,7 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="66dp"
         android:hint="UUID"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/Model"
         app:layout_constraintTop_toBottomOf="@+id/Make" />
@@ -71,6 +77,7 @@
         android:hint="Storage:"
         android:textColorHint="@color/white"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Model" />
@@ -86,6 +93,7 @@
         android:hint="RAM:"
         android:textColorHint="@color/white"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Storage" />
 
@@ -100,6 +108,7 @@
         android:hint="Operating System:"
         android:textColorHint="@color/white"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RAM" />
 
@@ -107,35 +116,38 @@
         android:id="@+id/SAVE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="158dp"
         android:backgroundTint="#0082f0"
         android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/OperatingSystem" />
+        app:layout_constraintTop_toBottomOf="@+id/OperatingSystem"
+        tools:layout_editor_absoluteY="502dp" />
 
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="112dp"
         android:layout_height="112dp"
-        android:layout_marginStart="148dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.035"
+        app:layout_constraintVertical_bias="0.018"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="24dp"
         android:fontFamily="@font/ericsson"
         android:text="QuarterMaster"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

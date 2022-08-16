@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#000000"
     android:backgroundTint="#000000"
-    tools:context=".profile">
+    tools:context=".Profile">
 
     <TextView
         android:id="@+id/email"

@@ -24,15 +24,7 @@
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-        </activity>
-        <activity
-            android:name=".HomePage"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
         <activity
             android:name=".ItemCreate"
@@ -41,7 +33,7 @@
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".profile"
+            android:name=".Profile"
             android:exported="false" />
         <activity
             android:name=".PasswordReset"
