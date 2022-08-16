@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
-    android:background="@color/black"
     tools:context=".Login">
 
     <EditText
@@ -76,16 +74,9 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/ericsson"
-        android:fontFamily="@font/ericsson"
         android:text="@string/login_button"
-        android:textColor="#0082F0"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp"
 
         android:textSize="25sp"
-        android:textStyle="bold"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -123,9 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="@string/forgot_password"
-        android:textColor="#0082F0"
 
-        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toRegister" />
