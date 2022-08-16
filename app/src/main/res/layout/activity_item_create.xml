@@ -24,32 +24,36 @@
 
         android:layout_width="341dp"
         android:layout_height="33dp"
+        android:layout_marginTop="24dp"
         android:background="#B52323"
         android:backgroundTint="#C0C0C0  "
         android:foregroundTint="#C8C1C1"
         android:textColor="@color/teal_200"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="318dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="112dp"
         android:layout_height="112dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="52dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/quartermaster"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="174dp" />
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/quartermaster" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
