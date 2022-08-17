@@ -4,20 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.WindowManager;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.Interpolator;
-import android.widget.ImageView;
-import android.window.SplashScreen;
 
-public class splashPage extends AppCompatActivity {
+public class SplashPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        startActivity(new Intent(splashPage.this, HomePage.class));
+        startActivity(new Intent(SplashPage.this, HomePage.class));
         finish();
     }
 }
