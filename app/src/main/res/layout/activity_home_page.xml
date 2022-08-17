@@ -15,7 +15,7 @@
         android:layout_marginTop="68dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/ericsson"
-        android:text="Quarter Master"
+        android:text="@string/app_name"
         android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -30,6 +30,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="@string/quartermaster_logo"
         android:src="@drawable/logo200x"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -48,6 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
+            android:baselineAligned="false"
             android:orientation="horizontal"
             android:paddingLeft="16dp"
             android:paddingTop="24dp"
@@ -75,6 +77,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="25dp"
+                        android:contentDescription="@string/qrscanner"
                         android:src="@drawable/whiteqr" />
                 </LinearLayout>
             </LinearLayout>
@@ -100,6 +103,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="25dp"
+                        android:contentDescription="@string/profile"
                         android:src="@drawable/profile_64x64" />
                 </LinearLayout>
             </LinearLayout>
@@ -127,6 +131,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="25dp"
+                        android:contentDescription="@string/create_item"
                         android:src="@drawable/laptopx64white" />
 
 
@@ -162,8 +167,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="15dp"
-        android:layout_marginLeft="57dp"
-        android:layout_marginRight="55dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="55dp"
         android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
