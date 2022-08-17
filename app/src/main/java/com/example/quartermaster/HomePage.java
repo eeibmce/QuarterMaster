@@ -37,6 +37,7 @@ public class HomePage extends AppCompatActivity {
             // if not logged in got ot login page
         } else {
             Intent i = new Intent(getApplicationContext(), Login.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
             startActivity(i);
         }
 
