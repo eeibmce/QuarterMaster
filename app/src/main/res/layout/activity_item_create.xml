@@ -23,15 +23,17 @@
         android:id="@+id/ItemType"
 
         android:layout_width="341dp"
-        android:layout_height="33dp"
+        android:layout_height="48dp"
         android:layout_marginTop="24dp"
         android:background="#B52323"
         android:backgroundTint="#C0C0C0  "
         android:foregroundTint="#C8C1C1"
         android:textColor="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.045"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -55,5 +57,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:srcCompat="@drawable/quartermaster" />
+
+    <Button
+        android:id="@+id/viewBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Items"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CreateBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
