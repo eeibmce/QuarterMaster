@@ -43,6 +43,7 @@ public class HomePage extends AppCompatActivity {
 
         View mitemsBtn = findViewById(R.id.itemsBtn);
         View mprofileBtn = findViewById(R.id.profileBtn);
+        View mqrOptions = findViewById(R.id.qrOptions);
 
         mitemsBtn.setOnClickListener(v -> {
 
@@ -53,6 +54,12 @@ public class HomePage extends AppCompatActivity {
         mprofileBtn.setOnClickListener(v -> {
 
             startActivity(new Intent(getApplicationContext(), Profile.class));
+
+        });
+
+        mqrOptions.setOnClickListener(v -> {
+
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
         });
 
