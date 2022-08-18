@@ -27,37 +27,19 @@ public class QrActivity extends AppCompatActivity {
 
         FirebaseAuth fAuth;
         FirebaseFirestore fStore;
-        Button mItemViewBtn;
-        TextView mUID, mEnterId, mItemInfo;
+        TextView mItemInfo;
 
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_item_view);
-            mItemViewBtn = findViewById(R.id.searchBtn);
             fAuth = FirebaseAuth.getInstance();
             fStore = FirebaseFirestore.getInstance();
-            mUID = findViewById(R.id.UID);
-            mEnterId = findViewById(R.id.ItemIdSearch);
             mItemInfo = findViewById(R.id.ItemInfo);
 
 
-            mUID.setText("Item ID's");
-
-            fStore.collection("Items").get().addOnCompleteListener(task -> {
-                if (task.isSuccessful()) {
-                    ArrayList<QueryDocumentSnapshot> docList = new ArrayList<>();
-                    for (QueryDocumentSnapshot document : task.getResult()) {
-                        docList.add(document);
-                        mUID.append("\n");
-                        mUID.append(document.getId());
-
-                    }
-                }
-            });
-
-            mItemViewBtn.setOnClickListener(v -> {
+// Need to be fed string from scanned qr code
                 fStore.collection("Items").document(mEnterId.getText().toString()).get().addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         DocumentSnapshot document = task.getResult();
