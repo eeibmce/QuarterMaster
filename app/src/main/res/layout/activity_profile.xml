@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    android:backgroundTint="#000000"
+    android:background="@drawable/bg_gradient"
     tools:context=".Profile">
 
     <TextView
@@ -69,7 +68,7 @@
         app:layout_constraintVertical_bias="0.285"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
-    <ImageView
+    <TextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,12 +76,17 @@
         android:layout_marginTop="21dp"
         android:layout_marginEnd="71dp"
         android:layout_marginBottom="32dp"
+        android:text="QuarterMaster"
+        android:fontFamily="@font/ericsson"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="27sp"
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:srcCompat="@drawable/quartermaster" />
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+    </TextView>
 
     <Button
         android:id="@+id/ProfileLogoutBtn"
