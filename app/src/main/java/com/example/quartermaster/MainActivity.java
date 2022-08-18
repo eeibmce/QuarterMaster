@@ -1,6 +1,7 @@
 package com.example.quartermaster;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.zxing.BarcodeFormat;
@@ -66,7 +68,9 @@ public class MainActivity extends AppCompatActivity {
         btScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 IntentIntegrator intentIntegrator = new IntentIntegrator(
+
                         MainActivity.this
                 );
                 intentIntegrator.setPrompt("For Flash Use Volume Up Key");
@@ -84,23 +88,22 @@ public class MainActivity extends AppCompatActivity {
                                     int resultCode,
                                     @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        IntentResult intentResult = IntentIntegrator.parseActivityResult(
-                requestCode, resultCode, data
-        );
+        IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (intentResult.getContents() != null) {
-//            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-//
-//            builder.setTitle("Result");
-//            builder.setMessage(intentResult.getContents());
-//            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                @Override
-//                public void onClick(DialogInterface dialogInterface, int i) {
-//                    dialogInterface.dismiss();
-//                }
-//            });
-//            builder.show();
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+            builder.setTitle("Result");
+            builder.setMessage(intentResult.getContents());
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+                }
+            });
+            builder.show();
+            String Uid = intentResult.getContents();
             Intent i = new Intent(getApplicationContext(), QrActivity.class);
-            i.putExtra("Uid", intentResult.getContents());
+            i.putExtra("Uid", Uid );
             startActivity(i);
         } else {
             Toast.makeText(getApplicationContext(),
