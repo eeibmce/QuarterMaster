@@ -24,6 +24,9 @@
         tools:overrideLibrary="com.google.zxing.client.android"
         tools:targetApi="30">
         <activity
+            android:name=".QrActivity"
+            android:exported="false" />
+        <activity
             android:name=".ItemView"
             android:exported="false" />
         <activity
@@ -52,7 +55,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".Capture"
             android:screenOrientation="portrait"
