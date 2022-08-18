@@ -123,17 +123,22 @@
         app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
-    <ImageView
+    <TextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/full_name"
+        android:text="QuarterMaster"
+        android:fontFamily="@font/ericsson"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.219"
-        app:srcCompat="@drawable/quartermaster" />
+        app:layout_constraintVertical_bias="0.219"/>
+<!--        app:srcCompat="@drawable/quartermaster" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
