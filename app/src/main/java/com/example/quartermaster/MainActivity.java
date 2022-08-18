@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        btScan = findViewById(R.id.ScanBtn);
+        btScan = findViewById(R.id.scanner);
         btScan.setOnClickListener(view -> {
             IntentIntegrator intentIntegrator = new IntentIntegrator(
                     MainActivity.this
