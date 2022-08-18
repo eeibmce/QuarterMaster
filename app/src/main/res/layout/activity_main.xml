@@ -1,27 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity"
+    tools:ignore="NamespaceTypo"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+ <EditText
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content"
+    android:id="@+id/et_input"
+    android:hint="Enter Text"
+    android:padding="12dp"
+    android:background="@android:drawable/editbox_background"/>
 
-    <Button
-        android:id="@+id/bt_scan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/qrscanner" /><![CDATA[
-
-    android:id="@+id/LogoutBtn"
+ <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="@string/logout_button"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.071" />
+    android:id="@+id/bt_generate"
+    android:text="Generate"
+    android:layout_marginTop="16dp"/>
 
-    ]]>
-</RelativeLayout>
+ <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/iv_output"
+    android:scaleType="fitCenter"
+    android:adjustViewBounds="true"/>
+
+</LinearLayout>
