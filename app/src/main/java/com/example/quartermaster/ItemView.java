@@ -80,7 +80,7 @@ TextView objectInfo;
                             for (Map.Entry<String, Object> entry : map.entrySet()) {
                                 objectInfo.append("\n");
                                 objectInfo.append(entry.getValue().toString());
-//                                Log.d("TAG", entry.getValue().toString());
+
 
                             }
                         }
