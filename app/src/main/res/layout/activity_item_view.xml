@@ -11,25 +11,25 @@
         android:id="@+id/UID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:editable="false"
         android:selectAllOnFocus="true"
-        android:text="ItemType"
+        android:text="@string/id_list"
         android:textColor="#FFFFFF"
         android:textIsSelectable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.103" />
+        app:layout_constraintVertical_bias="0.022" />
 
     <EditText
 
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/ItemIdSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Enter Item ID"
+        android:hint="@string/enter_item_id"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
@@ -41,39 +41,40 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/searchButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/searchBtn"
+        android:layout_width="99dp"
+        android:layout_height="51dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="341dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="342dp"
-        android:text="Search"
+        android:text="@string/search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toEndOf="@+id/ItemIdSearch"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/ItemInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Item Info will display here"
+        android:text="@string/specific_item_info"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintVertical_bias="0.172" />
+        app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch"
+        app:layout_constraintVertical_bias="0.174" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/logo"
         android:layout_width="96dp"
         android:layout_height="96dp"
+        android:contentDescription="@string/quartermaster_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.943"

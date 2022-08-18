@@ -3,7 +3,6 @@ package com.example.quartermaster;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -50,7 +49,6 @@ public class ItemCreate extends AppCompatActivity {
                 Toast.makeText(ItemCreate.this, "Must Select ItemType", Toast.LENGTH_SHORT).show();
                 return;
             }
-
 
 
             // Get email
