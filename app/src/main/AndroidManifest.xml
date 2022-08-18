@@ -24,10 +24,10 @@
         tools:overrideLibrary="com.google.zxing.client.android"
         tools:targetApi="30">
         <activity
-            android:name=".QrActivity"
+            android:name=".ItemView"
             android:exported="false" />
         <activity
-            android:name=".ItemView"
+            android:name=".ItemListView"
             android:exported="false" />
         <activity
             android:name=".HomePage"
@@ -54,11 +54,11 @@
             android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".QrActivity"
             android:exported="false" />
         <activity
             android:name=".Capture"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:stateNotNeeded="true"
             android:theme="@style/zxing_CaptureTheme" />
     </application>

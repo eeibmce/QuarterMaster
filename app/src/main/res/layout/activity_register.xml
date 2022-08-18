@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@drawable/bg_gradient"
     tools:context=".Register">
 
     <EditText
@@ -20,6 +20,7 @@
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
         android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -44,6 +45,7 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -56,7 +58,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/appName"
         android:layout_width="293dp"
         android:layout_height="45dp"
         android:layout_marginTop="116dp"
@@ -70,7 +72,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/loginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -82,7 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
 
     <EditText
         android:id="@+id/FullName"
@@ -96,6 +98,7 @@
         android:ems="10"
         android:hint="@string/full_name"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -104,7 +107,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/loginTitle"
         app:layout_constraintVertical_bias="0.110000014" />
 
     <Button
@@ -127,7 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="#120808"
+        android:background="@color/zxing_transparent"
         android:text="@string/already_have_an_account_login_here"
         android:textColor="#ffff"
         android:textStyle="bold"
@@ -136,7 +139,7 @@
         app:layout_constraintTop_toBottomOf="@+id/RegisterBtn" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logo"
         android:layout_width="69dp"
         android:layout_height="81dp"
         android:layout_marginTop="20dp"

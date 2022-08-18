@@ -55,7 +55,7 @@ public class HomePage extends AppCompatActivity {
         });
         qrOptions.setOnClickListener(v -> {
 
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), QrActivity.class));
 
         });
 

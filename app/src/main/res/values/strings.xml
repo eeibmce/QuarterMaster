@@ -36,6 +36,8 @@
     <string name="create_item">Create Item</string>
     <string name="devices">Devices</string>
     <string name="logout">Logout</string>
+    <string name="select_item_type">Select Item Type</string>
+    <string name="login_page">Login Page</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -45,4 +47,6 @@
     <string name="enter_item_id">Enter Item ID</string>
     <string name="search">Search</string>
     <string name="specific_item_info">Specific Item Info</string>
+    <string name="generate">Generate</string>
+    <string name="scan">Scan</string>
 </resources>

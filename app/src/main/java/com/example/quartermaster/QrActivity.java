@@ -1,55 +1,102 @@
 package com.example.quartermaster;
 
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.text.TextUtils;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.Map;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 public class QrActivity extends AppCompatActivity {
-
-
-    FirebaseAuth fAuth;
-    FirebaseFirestore fStore;
-    TextView mItemInfo;
+    EditText etInput;
+    Button btGenerate, btScan;
+    ImageView ivOutput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr);
-        fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
-        mItemInfo = findViewById(R.id.ItemInfo);
+        etInput = findViewById(R.id.et_input);
+        btGenerate = findViewById(R.id.bt_generate);
+        ivOutput = findViewById(R.id.iv_output);
+        btScan = findViewById(R.id.bt_scan);
+        //Generate code
+        btGenerate.setOnClickListener(view -> {
 
-        String Uid = getIntent().getExtras().getString("Uid").trim();
+            String sText = etInput.getText().toString().trim();
+            if (TextUtils.isEmpty(sText)) {
+                etInput.setError("Must provide text to be encoded");
+                return;
+            }
+            MultiFormatWriter writer = new MultiFormatWriter();
 
-        // Need to be fed string from scanned qr code
-        fStore.collection("Items").document(Uid).get().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                DocumentSnapshot document = task.getResult();
-                if (document.exists()) {
-
-                    Map<String, Object> map = document.getData();
-                    mItemInfo.setText("");
-                    assert map != null;
-                    for (Map.Entry<String, Object> entry : map.entrySet()) {
-                        mItemInfo.append("\n");
-                        mItemInfo.append(entry.getValue().toString());
-                    }
-                }
-            } else {
-                Toast.makeText(com.example.quartermaster.QrActivity.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();
-
+            try {
+                BitMatrix matrix = writer.encode(sText, BarcodeFormat.QR_CODE, 350, 350);
+                BarcodeEncoder encoder = new BarcodeEncoder();
+                Bitmap bitmap = encoder.createBitmap(matrix);
+                ivOutput.setImageBitmap(bitmap);
+                InputMethodManager manager = (InputMethodManager) getSystemService(
+                        Context.INPUT_METHOD_SERVICE
+                );
+                manager.hideSoftInputFromWindow(etInput.getApplicationWindowToken(), 0);
+            } catch (WriterException e) {
+                e.printStackTrace();
             }
         });
+        // Start scan
+        btScan.setOnClickListener(view -> {
+
+            IntentIntegrator intentIntegrator = new IntentIntegrator(
+
+                    QrActivity.this
+            );
+            intentIntegrator.setPrompt("For Flash Use Volume Up Key");
+            intentIntegrator.setBeepEnabled(true);
+            intentIntegrator.setOrientationLocked(true);
+            intentIntegrator.setCaptureActivity(Capture.class);
+            intentIntegrator.initiateScan();
+        });
+    }
+
+    // Get scan result
+    @Override
+    protected void onActivityResult(int requestCode,
+                                    int resultCode,
+                                    @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (intentResult.getContents() != null) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(QrActivity.this);
+
+            builder.setTitle("Result");
+            builder.setMessage(intentResult.getContents());
+            builder.setPositiveButton("OK", (dialogInterface, i) -> dialogInterface.dismiss());
+            builder.show();
+            String Uid = intentResult.getContents();
+            Intent i = new Intent(getApplicationContext(), ItemView.class);
+            i.putExtra("Uid", Uid);
+            startActivity(i);
+        } else {
+            Toast.makeText(getApplicationContext(),
+                    "OOPS... You did not scan anything",
+                    Toast.LENGTH_SHORT).show();
+        }
     }
 }
-
-
 

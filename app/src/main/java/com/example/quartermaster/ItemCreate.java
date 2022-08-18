@@ -19,7 +19,7 @@ import java.util.Map;
 
 public class ItemCreate extends AppCompatActivity {
 
-    Button mCreateBtn, mViewBtn;
+    Button mCreateBtn;
     Spinner mItemType;
     FirebaseAuth fAuth;
 
@@ -34,7 +34,6 @@ public class ItemCreate extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         mCreateBtn = findViewById(R.id.CreateBtn);
         mItemType = findViewById(R.id.ItemType);
-        mViewBtn = findViewById(R.id.viewBtn);
 
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(ItemCreate.this,
@@ -68,11 +67,6 @@ public class ItemCreate extends AppCompatActivity {
                         startActivity(i);
                     })
                     .addOnFailureListener(e -> Toast.makeText(ItemCreate.this, "Item could not be added", Toast.LENGTH_SHORT).show());
-        });
-        mViewBtn.setOnClickListener(v -> {
-
-            startActivity(new Intent(getApplicationContext(), ItemView.class));
-
         });
     }
 }
