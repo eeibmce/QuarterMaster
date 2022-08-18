@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center_horizontal"
     tools:context=".MainActivity"
-    tools:ignore="NamespaceTypo"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    tools:ignore="NamespaceTypo">
 
 
- <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/et_input"
-    android:hint="Enter Text"
-    android:padding="12dp"
-    android:background="@android:drawable/editbox_background"/>
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Enter Text"
+        android:padding="12dp" />
 
- <Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/bt_generate"
-    android:text="Generate"
-    android:layout_marginTop="16dp"/>
+    <Button
+        android:id="@+id/bt_generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Generate" />
 
- <ImageView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/iv_output"
-    android:scaleType="fitCenter"
-    android:adjustViewBounds="true"/>
+    <Button
+        android:id="@+id/bt_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Scan" />
+
+    <ImageView
+        android:id="@+id/iv_output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
 
 </LinearLayout>

@@ -3,7 +3,6 @@ package com.example.quartermaster;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,7 +40,6 @@ public class HomePage extends AppCompatActivity {
             Intent i = new Intent(getApplicationContext(), Login.class);
             startActivity(i);
         }
-
 
 
         mitemsBtn.setOnClickListener(v -> {

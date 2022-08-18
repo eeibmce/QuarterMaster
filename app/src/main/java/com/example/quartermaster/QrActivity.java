@@ -34,10 +34,10 @@ public class QrActivity extends AppCompatActivity {
             fAuth = FirebaseAuth.getInstance();
             fStore = FirebaseFirestore.getInstance();
             mItemInfo = findViewById(R.id.ItemInfo);
-            String sText = getIntent().getStringExtra("sText");
+            String Uid = getIntent().getStringExtra("Uid");
 
             // Need to be fed string from scanned qr code
-            fStore.collection("Items").document(sText).get().addOnCompleteListener(task -> {
+            fStore.collection("Items").document(Uid).get().addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
