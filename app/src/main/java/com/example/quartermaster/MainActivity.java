@@ -3,6 +3,7 @@ package com.example.quartermaster;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
@@ -46,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
                     manager.hideSoftInputFromWindow(etInput.getApplicationWindowToken(), 0);
                 } catch (WriterException e) {
                     e.printStackTrace();
+                    Intent i = new Intent(MainActivity.this, QrActivity.class);
+                    i.putExtra("sText",sText);
+                    startActivity(i);
                 }
             }
         });

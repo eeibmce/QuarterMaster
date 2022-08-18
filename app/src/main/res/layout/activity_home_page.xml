@@ -63,7 +63,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/qrOptions"
+                    android:id="@+id/toQr"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_gravity="center"
@@ -89,7 +89,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/profileBtn"
+                    android:id="@+id/toProfile"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_gravity="center"
@@ -116,7 +116,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/itemsBtn"
+                    android:id="@+id/toItems"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:layout_gravity="center"
