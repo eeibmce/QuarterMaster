@@ -35,6 +35,7 @@ public class ItemCreate extends AppCompatActivity {
         mCreateBtn = findViewById(R.id.CreateBtn);
         mItemType = findViewById(R.id.ItemType);
 
+
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(ItemCreate.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.ListofItems));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -47,11 +48,13 @@ public class ItemCreate extends AppCompatActivity {
                 Toast.makeText(ItemCreate.this, "Must Select ItemType", Toast.LENGTH_SHORT).show();
                 return;
             }
+
+
             // Get email
             assert user != null;
             String email = user.getEmail();
             //Adding categories to item on firestore
-            Map<String, String> item = new HashMap<>();
+            Map<String, Object> item = new HashMap<>();
             item.put("ItemType", itemType);
             item.put("OwnerEmail", email);
 
@@ -60,7 +63,7 @@ public class ItemCreate extends AppCompatActivity {
                     .add(item)
                     .addOnSuccessListener(documentReference -> {
                         Toast.makeText(ItemCreate.this, "Item successfully added", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                        Intent i = new Intent(getApplicationContext(), HomePage.class);
                         startActivity(i);
                     })
                     .addOnFailureListener(e -> Toast.makeText(ItemCreate.this, "Item could not be added", Toast.LENGTH_SHORT).show());

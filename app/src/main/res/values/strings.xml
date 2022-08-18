@@ -43,4 +43,10 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="id_list">ID List</string>
+    <string name="enter_item_id">Enter Item ID</string>
+    <string name="search">Search</string>
+    <string name="specific_item_info">Specific Item Info</string>
+    <string name="generate">Generate</string>
+    <string name="scan">Scan</string>
 </resources>

@@ -8,6 +8,7 @@ class Phone {
     private final String colour;
     private final String nameOwner;
 
+
     public Phone(String model, String storage, String modelNumber, String brand, String colour, String nameOwner) {
         this.model = model;
         this.storage = storage;

@@ -3,7 +3,6 @@ package com.example.quartermaster;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,12 +12,14 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class HomePage extends AppCompatActivity {
 
-    LinearLayout qrOptions, profileBtn, itemsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+        View mitemsBtn = findViewById(R.id.toItems);
+        View mprofileBtn = findViewById(R.id.toProfile);
+        View qrOptions = findViewById(R.id.toQr);
 
         //Check if user is logged in
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -34,16 +35,12 @@ public class HomePage extends AppCompatActivity {
             // authenticate with your backend server, if you have one. Use
             // FirebaseUser.getIdToken() instead.
             String uid = user.getUid();
-            // if not logged in got ot login page
+            // if not logged in got at login page
         } else {
             Intent i = new Intent(getApplicationContext(), Login.class);
-            i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
             startActivity(i);
         }
 
-        View mitemsBtn = findViewById(R.id.itemsBtn);
-        View mprofileBtn = findViewById(R.id.profileBtn);
-        View mqrOptions = findViewById(R.id.qrOptions);
 
         mitemsBtn.setOnClickListener(v -> {
 
@@ -56,10 +53,9 @@ public class HomePage extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), Profile.class));
 
         });
+        qrOptions.setOnClickListener(v -> {
 
-        mqrOptions.setOnClickListener(v -> {
-
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), QrActivity.class));
 
         });
 
