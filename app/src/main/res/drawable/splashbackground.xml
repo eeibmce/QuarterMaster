@@ -4,11 +4,6 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/newlogosimplewhite"/>
-    </item>
-    <item android:bottom="50dp"> //
-        <bitmap
-            android:gravity="bottom"
-            android:src="@drawable/quartermaster"/>
+            android:src="@drawable/splashpagebyack"/>
     </item>
 </layer-list>
