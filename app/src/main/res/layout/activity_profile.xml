@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    android:backgroundTint="#000000"
-    tools:context=".profile">
+    android:background="@drawable/bg_gradient"
+    tools:context=".Profile">
 
     <TextView
-        android:id="@+id/email"
+        android:id="@+id/Email"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:background="#2D2D2D"
-        android:hint="Email"
+        android:hint="@string/email"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
@@ -25,25 +24,12 @@
         app:layout_constraintVertical_bias="0.534" />
 
     <Button
-        android:id="@+id/back"
-        android:layout_width="90dp"
-        android:layout_height="56dp"
-        android:backgroundTint="#0082F0"
-        android:drawableTop="@drawable/previous"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <Button
-        android:id="@+id/devices"
+        android:id="@+id/Devices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#0082F0"
-        android:text="Devices"
+        android:text="@string/devices"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,14 +37,15 @@
         app:layout_constraintVertical_bias="0.342" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/ProfilePic"
         android:layout_width="157dp"
         android:layout_height="125dp"
         android:layout_marginStart="127dp"
         android:layout_marginTop="92dp"
         android:layout_marginEnd="127dp"
         android:layout_marginBottom="70dp"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        android:contentDescription="@string/profile"
+        app:layout_constraintBottom_toTopOf="@+id/Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,45 +54,52 @@
         app:srcCompat="@drawable/profileuser" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/logo"
         android:layout_width="112dp"
         android:layout_height="112dp"
         android:layout_marginStart="141dp"
         android:layout_marginTop="280dp"
         android:layout_marginEnd="142dp"
+        android:contentDescription="@string/quartermaster_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/ProfilePic"
         app:layout_constraintVertical_bias="0.285"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
-    <ImageView
-        android:id="@+id/imageView14"
+    <TextView
+        android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginTop="21dp"
         android:layout_marginEnd="71dp"
         android:layout_marginBottom="32dp"
+        android:text="QuarterMaster"
+        android:fontFamily="@font/ericsson"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13"
-        app:srcCompat="@drawable/quartermaster" />
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+    </TextView>
 
     <Button
         android:id="@+id/ProfileLogoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="56dp"
         android:backgroundTint="#0082F0"
-        android:text="Logout"
+        android:text="@string/logout_button"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.023" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

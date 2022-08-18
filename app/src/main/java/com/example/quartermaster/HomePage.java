@@ -1,13 +1,12 @@
 package com.example.quartermaster;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -38,35 +37,32 @@ public class HomePage extends AppCompatActivity {
             // if not logged in got ot login page
         } else {
             Intent i = new Intent(getApplicationContext(), Login.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
             startActivity(i);
         }
 
         View mitemsBtn = findViewById(R.id.itemsBtn);
         View mprofileBtn = findViewById(R.id.profileBtn);
+        View mqrOptions = findViewById(R.id.qrOptions);
 
         mitemsBtn.setOnClickListener(v -> {
 
-                startActivity(new Intent(getApplicationContext(),ItemCreate.class));
+            startActivity(new Intent(getApplicationContext(), ItemCreate.class));
 
         });
 
         mprofileBtn.setOnClickListener(v -> {
 
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-
-
-            startActivity(new Intent(getApplicationContext(),profile.class));
+            startActivity(new Intent(getApplicationContext(), Profile.class));
 
         });
-//        mprofileBtn.setOnClickListener(v -> {
-//
-//            startActivity(new Intent(getApplicationContext(),profile.class));
-//
-//        });
 
+        mqrOptions.setOnClickListener(v -> {
 
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+        });
 
 
     }
 }
-//test

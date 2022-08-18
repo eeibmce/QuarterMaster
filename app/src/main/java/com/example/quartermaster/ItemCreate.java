@@ -1,7 +1,5 @@
 package com.example.quartermaster;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,6 +7,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -49,7 +49,7 @@ public class ItemCreate extends AppCompatActivity {
             }
             // Get email
             assert user != null;
-            String email = ((FirebaseUser) user).getEmail();
+            String email = user.getEmail();
             //Adding categories to item on firestore
             Map<String, String> item = new HashMap<>();
             item.put("ItemType", itemType);

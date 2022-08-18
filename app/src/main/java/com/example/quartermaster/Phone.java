@@ -1,7 +1,5 @@
 package com.example.quartermaster;
 
-import java.util.Scanner;
-
 class Phone {
     private final String model;
     private final String storage;

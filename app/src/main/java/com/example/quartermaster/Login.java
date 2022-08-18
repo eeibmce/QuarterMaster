@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -63,6 +62,7 @@ public class Login extends AppCompatActivity {
                     Toast.makeText(Login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
                     mPassword.setText("");
                     startActivity(new Intent(getApplicationContext(), HomePage.class));
+                    finish();
                 } else {
                     Toast.makeText(Login.this, "Error ! " + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                 }
@@ -75,5 +75,9 @@ public class Login extends AppCompatActivity {
         // Link to password reset
         mToResetPassword.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), PasswordReset.class)));
 
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 }

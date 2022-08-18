@@ -1,8 +1,6 @@
 package com.example.quartermaster;
 
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -65,7 +65,8 @@ public class Register extends AppCompatActivity {
                             .addOnCompleteListener(task2 -> {
                                 if (task2.isSuccessful()) {
                                     Toast.makeText(Register.this, "Verification Email Sent", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                    startActivity(new Intent(getApplicationContext(), HomePage.class));
+                                    finish();
                                 } else {
                                     Toast.makeText(Register.this, "Email Verification sending failed", Toast.LENGTH_SHORT).show();
                                 }

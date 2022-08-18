@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
-
-    android:background="@color/black"
+    android:background="@drawable/bg_gradient"
     tools:context=".Login">
 
     <EditText
@@ -22,6 +20,7 @@
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
         android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -30,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/loginTitle"
         app:layout_constraintVertical_bias="0.35000002" />
 
     <EditText
@@ -46,6 +45,7 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -58,32 +58,12 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="300dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="112dp"
-        android:fontFamily="@font/ericsson"
-        android:text="@string/app_name"
-        android:textStyle="bold"
-        android:textColor="#0082F0"
-        android:textSize="32sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-
-        android:id="@+id/textView2"
+        android:id="@+id/loginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ericsson"
-        android:text="@string/login_button"
-        android:textColor="#0082F0"
-        android:textSize="25sp"
-        android:fontFamily="@font/ericsson"
-        android:textStyle="bold"
-
+        android:text="@string/login_page"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -103,6 +83,7 @@
         android:layout_marginEnd="16dp"
         android:backgroundTint="#0082F0"
         android:text="@string/login_button"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Password" />
@@ -124,17 +105,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="@string/forgot_password"
-        android:textColor="#0082F0"
-
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toRegister" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/logo"
         android:layout_width="112dp"
         android:layout_height="112dp"
+        android:contentDescription="@string/quartermaster_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -143,16 +123,22 @@
         app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
-    <ImageView
-        android:id="@+id/imageView7"
+    <TextView
+        android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/full_name"
+        android:text="QuarterMaster"
+        android:fontFamily="@font/ericsson"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.219"
-        app:srcCompat="@drawable/quartermaster" />
+        app:layout_constraintVertical_bias="0.219"/>
+<!--        app:srcCompat="@drawable/quartermaster" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

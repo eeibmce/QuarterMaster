@@ -17,7 +17,6 @@
     <string name="new_here_create_an_account">New Here? Create an Account</string>
     <string name="reset_password">Get password reset email</string>
     <string name="forgot_password">Forgot Password?</string>
-    <string name="textview">TextView</string>
     <string-array name="ListofItems">
         <item>Phone</item>
         <item>Laptop</item>
@@ -27,12 +26,21 @@
         <item>Server</item>
     </string-array>
     <string name="title_activity_home_pageqm">HomePageqm</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="make">Make</string>
+    <string name="quartermaster_logo">QuarterMaster Logo</string>
+    <string name="qrscanner">QrScanner</string>
+    <string name="profile">Profile</string>
+    <string name="create_item">Create Item</string>
+    <string name="devices">Devices</string>
+    <string name="logout">Logout</string>
+    <string name="select_item_type">Select Item Type</string>
+    <string name="login_page">Login Page</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
