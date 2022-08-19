@@ -45,13 +45,10 @@ public class ItemListView extends AppCompatActivity {
                 for (QueryDocumentSnapshot document : task.getResult()) {
                     docList.add(document);
 
-//                    mUID.append(document.getId());
-
                     fStore.collection("Items").document(document.getId()).get().addOnCompleteListener(tasks -> {
                         if (tasks.isSuccessful()) {
                             DocumentSnapshot document2 = tasks.getResult();
                             if (document2.exists()) {
-
                                 mUID.append("\n");
                                 mUID.append("\n -> ");
                                 mUID.append(document.getId());
@@ -60,20 +57,15 @@ public class ItemListView extends AppCompatActivity {
                                 for (Map.Entry<String, Object> entry : map.entrySet()) {
                                     mUID.append("\n");
                                     mUID.append(entry.getValue().toString());
-
-
                                 }
                             }
                         } else {
                             Toast.makeText(ItemListView.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();
-
                         }
                     });
                 }
             }
         });
-
-
         mItemViewBtn.setOnClickListener(v -> {
             String Uid = mEnterId.getText().toString();
             Intent i = new Intent(getApplicationContext(), ItemView.class);
@@ -81,6 +73,4 @@ public class ItemListView extends AppCompatActivity {
             startActivity(i);
         });
     }
-
-
 }
