@@ -5,8 +5,12 @@
       <map>
         <entry key="..\:/Users/eelldar/StudioProjects/QuarterMaster/app/src/main/res/layout/activity_home_page.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/eelldar/StudioProjects/QuarterMaster/app/src/main/res/layout/activity_item_create.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/eelldar/StudioProjects/QuarterMaster/app/src/main/res/layout/activity_item_edit.xml" value="0.24864130434782608" />
         <entry key="..\:/Users/eelldar/StudioProjects/QuarterMaster/app/src/main/res/layout/activity_item_list_view.xml" value="0.264" />
+        <entry key="..\:/Users/eelldar/StudioProjects/QuarterMaster/app/src/main/res/layout/activity_item_view.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/eelldar/StudioProjects/QuarterMaster/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

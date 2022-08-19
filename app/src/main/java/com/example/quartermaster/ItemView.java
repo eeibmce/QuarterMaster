@@ -1,6 +1,8 @@
 package com.example.quartermaster;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +20,7 @@ public class ItemView extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     TextView mItemInfo;
+    Button mtoEditItemBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,7 @@ public class ItemView extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         mItemInfo = findViewById(R.id.ItemInfo);
+        mtoEditItemBtn = findViewById(R.id.toEditItemBtn);
 
         String Uid = getIntent().getExtras().getString("Uid").trim();
 
@@ -47,6 +51,11 @@ public class ItemView extends AppCompatActivity {
             } else {
                 Toast.makeText(ItemView.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();
             }
+        });
+        mtoEditItemBtn.setOnClickListener(v -> {
+        Intent i = new Intent(getApplicationContext(), ItemEdit.class);
+        i.putExtra("Uid", Uid);
+        startActivity(i);
         });
     }
 }

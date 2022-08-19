@@ -1,4 +1,5 @@
 package com.example.quartermaster;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,6 +8,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashPage extends AppCompatActivity {
@@ -16,6 +18,7 @@ public class SplashPage extends AppCompatActivity {
 //    ImageView imageView3;
 //    TextView textView, textView2;
     private static final int SPLASH_SCREEN_TIMEOUT = 2000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -52,4 +52,6 @@
     <string name="quantity">Quantity</string>
     <string name="filter">Filter</string>
     <string name="extra_info">Extra Info</string>
+    <string name="edit_item">Edit Item</string>
+    <string name="itemid">ItemID</string>
 </resources>
