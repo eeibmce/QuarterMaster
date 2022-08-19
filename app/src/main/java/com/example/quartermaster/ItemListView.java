@@ -1,6 +1,10 @@
 package com.example.quartermaster;
 
+import static android.graphics.Typeface.BOLD;
+
+import android.graphics.fonts.Font;
 import android.os.Bundle;
+import android.text.Html;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,7 +39,7 @@ public class ItemListView extends AppCompatActivity {
         mItemInfo = findViewById(R.id.ItemInfo);
 
 
-        mUID.setText("Item ID's");
+        mUID.setText(Html.fromHtml("<b>Item ID's:</b>"));
 
         fStore.collection("Items").get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
@@ -49,6 +53,7 @@ public class ItemListView extends AppCompatActivity {
             }
         });
 
+
         mItemViewBtn.setOnClickListener(v -> {
             fStore.collection("Items").document(mEnterId.getText().toString()).get().addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
@@ -59,7 +64,7 @@ public class ItemListView extends AppCompatActivity {
                         mItemInfo.setText("");
                         assert map != null;
                         for (Map.Entry<String, Object> entry : map.entrySet()) {
-                            mItemInfo.append("\n");
+                            mItemInfo.append("\n -> ");
                             mItemInfo.append(entry.getValue().toString());
 
 

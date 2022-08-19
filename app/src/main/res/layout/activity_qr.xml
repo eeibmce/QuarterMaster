@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/bg_gradient"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".QrActivity">
@@ -14,31 +13,36 @@
         android:id="@+id/et_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:background="@android:drawable/editbox_background"
         android:hint="@string/enter_item_id"
-        android:padding="12dp"
-        android:autofillHints=""
-        android:inputType="text" />
+        android:inputType="text"
+        android:padding="12dp" />
 
     <Button
         android:id="@+id/bt_generate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/generate" />
+        android:backgroundTint="#0082F0"
+        android:text="@string/generate"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="64dp" />
 
     <Button
         android:id="@+id/bt_scan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/scan" />
+        android:backgroundTint="#0082F0"
+        android:text="@string/scan"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="583dp" />
 
     <ImageView
         android:id="@+id/iv_output"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:contentDescription="@string/qrscanner" />
+        android:contentDescription="@string/qrscanner"
+        android:scaleType="fitCenter" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

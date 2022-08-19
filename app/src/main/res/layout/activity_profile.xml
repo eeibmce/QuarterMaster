@@ -40,17 +40,12 @@
         android:id="@+id/ProfilePic"
         android:layout_width="157dp"
         android:layout_height="125dp"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="127dp"
-        android:layout_marginBottom="70dp"
         android:contentDescription="@string/profile"
         app:layout_constraintBottom_toTopOf="@+id/Email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.338"
         app:srcCompat="@drawable/profileuser" />
 
     <ImageView
