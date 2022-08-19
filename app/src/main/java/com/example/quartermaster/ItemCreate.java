@@ -36,7 +36,7 @@ public class ItemCreate extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         mCreateBtn = findViewById(R.id.CreateBtn);
         mItemType = findViewById(R.id.ItemType);
-        mQuantity = findViewById(R.id.quantity);
+        mQuantity = findViewById(R.id.Quantity);
 
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(ItemCreate.this,
@@ -62,6 +62,9 @@ public class ItemCreate extends AppCompatActivity {
             item.put("OwnerEmail", email);
             String stquantity = mQuantity.getText().toString();
             int quantity = Integer.parseInt(stquantity);
+            if (quantity > 100){
+                mQuantity.setError("Only 100 or less items may be added at a time");
+            }
             for (int n = quantity; n > 0; n--) {
                 // Add a new document with a generated ID
                 db.collection("Items")
