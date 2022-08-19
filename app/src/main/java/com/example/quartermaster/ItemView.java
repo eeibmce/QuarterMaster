@@ -29,7 +29,7 @@ public class ItemView extends AppCompatActivity {
 
         String Uid = getIntent().getExtras().getString("Uid").trim();
 
-        // Need to be fed string from scanned qr code
+        // Need to be fed string from scanned qr code or searched id
         fStore.collection("Items").document(Uid).get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 DocumentSnapshot document = task.getResult();
@@ -37,6 +37,7 @@ public class ItemView extends AppCompatActivity {
 
                     Map<String, Object> map = document.getData();
                     mItemInfo.setText("");
+                    mItemInfo.append(document.getId());
                     assert map != null;
                     for (Map.Entry<String, Object> entry : map.entrySet()) {
                         mItemInfo.append("\n");
@@ -45,7 +46,6 @@ public class ItemView extends AppCompatActivity {
                 }
             } else {
                 Toast.makeText(ItemView.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();
-
             }
         });
     }

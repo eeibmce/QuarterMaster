@@ -82,12 +82,6 @@ public class QrActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (intentResult.getContents() != null) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(QrActivity.this);
-
-            builder.setTitle("Result");
-            builder.setMessage(intentResult.getContents());
-            builder.setPositiveButton("OK", (dialogInterface, i) -> dialogInterface.dismiss());
-            builder.show();
             String Uid = intentResult.getContents();
             Intent i = new Intent(getApplicationContext(), ItemView.class);
             i.putExtra("Uid", Uid);
