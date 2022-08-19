@@ -46,36 +46,59 @@ public class ItemListView extends AppCompatActivity {
                 ArrayList<QueryDocumentSnapshot> docList = new ArrayList<>();
                 for (QueryDocumentSnapshot document : task.getResult()) {
                     docList.add(document);
-                    mUID.append("\n");
-                    mUID.append(document.getId());
 
+//                    mUID.append(document.getId());
+
+                    fStore.collection("Items").document(document.getId()).get().addOnCompleteListener(tasks -> {
+                        if (tasks.isSuccessful()) {
+                            DocumentSnapshot document2 = tasks.getResult();
+                            if (document2.exists()) {
+
+                                mUID.append("\n");
+                                mUID.append("\n -> ");
+                                mUID.append(document.getId());
+                                Map<String, Object> map = document2.getData();
+                                mItemInfo.setText("");
+                                assert map != null;
+                                for (Map.Entry<String, Object> entry : map.entrySet()) {
+                                    mUID.append("\n");
+                                    mUID.append(entry.getValue().toString());
+
+
+                                }
+                            }
+                        } else {
+                            Toast.makeText(ItemListView.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();
+
+                        }
+                    });
                 }
             }
         });
 
 
-        mItemViewBtn.setOnClickListener(v -> {
-            fStore.collection("Items").document(mEnterId.getText().toString()).get().addOnCompleteListener(task -> {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-
-                        Map<String, Object> map = document.getData();
-                        mItemInfo.setText("");
-                        assert map != null;
-                        for (Map.Entry<String, Object> entry : map.entrySet()) {
-                            mItemInfo.append("\n -> ");
-                            mItemInfo.append(entry.getValue().toString());
-
-
-                        }
-                    }
-                } else {
-                    Toast.makeText(ItemListView.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();
-
-                }
-            });
-        });
+//        mItemViewBtn.setOnClickListener(v -> {
+//            fStore.collection("Items").document(mEnterId.getText().toString()).get().addOnCompleteListener(task -> {
+//                if (task.isSuccessful()) {
+//                    DocumentSnapshot document = task.getResult();
+//                    if (document.exists()) {
+//
+//                        Map<String, Object> map = document.getData();
+//                        mItemInfo.setText("");
+//                        assert map != null;
+//                        for (Map.Entry<String, Object> entry : map.entrySet()) {
+//                            mItemInfo.append("\n -> ");
+//                            mItemInfo.append(entry.getValue().toString());
+//
+//
+//                        }
+//                    }
+//                } else {
+//                    Toast.makeText(ItemListView.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();
+//
+//                }
+//            });
+//        });
     }
 
 

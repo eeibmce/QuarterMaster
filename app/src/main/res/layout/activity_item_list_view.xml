@@ -25,8 +25,8 @@
     <EditText
 
         android:id="@+id/ItemIdSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="42dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/enter_item_id"
@@ -35,42 +35,40 @@
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.405"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/searchBtn"
         android:layout_width="99dp"
         android:layout_height="51dp"
-        android:layout_marginStart="12dp"
         android:layout_marginTop="341dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="342dp"
         android:text="@string/search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
-        app:layout_constraintStart_toEndOf="@+id/ItemIdSearch"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.333" />
 
     <TextView
         android:id="@+id/ItemInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/specific_item_info"
-        android:textStyle="bold"
-        android:fontFamily="@font/ericsson"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch"
-        app:layout_constraintVertical_bias="0.174" />
+        app:layout_constraintVertical_bias="0.272" />
 
     <ImageView
         android:id="@+id/logo"
