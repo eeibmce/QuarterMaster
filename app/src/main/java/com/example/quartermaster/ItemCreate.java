@@ -62,7 +62,7 @@ public class ItemCreate extends AppCompatActivity {
             item.put("OwnerEmail", email);
             String stquantity = mQuantity.getText().toString();
             int quantity = Integer.parseInt(stquantity);
-            for (int n = quantity; n>0; n-- ) {
+            for (int n = quantity; n > 0; n--) {
                 // Add a new document with a generated ID
                 db.collection("Items")
                         .add(item)
