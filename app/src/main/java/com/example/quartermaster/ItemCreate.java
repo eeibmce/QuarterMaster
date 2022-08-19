@@ -74,6 +74,5 @@ public class ItemCreate extends AppCompatActivity {
                         .addOnFailureListener(e -> Toast.makeText(ItemCreate.this, "Item could not be added", Toast.LENGTH_SHORT).show());
             }
         });
-
     }
 }
