@@ -49,4 +49,5 @@
     <string name="specific_item_info">Specific Item Info</string>
     <string name="generate">Generate</string>
     <string name="scan">Scan</string>
+    <string name="filter">Filter</string>
 </resources>

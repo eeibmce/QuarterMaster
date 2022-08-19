@@ -7,26 +7,40 @@
     android:background="#000000"
     tools:context=".ItemListView">
 
+    <Button
+        android:id="@+id/filterBtn"
+        android:layout_width="99dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="556dp"
+        android:backgroundTint="#0082F0"
+        android:text="@string/filter"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/FilterItems" />
+
     <TextView
         android:id="@+id/UID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:selectAllOnFocus="true"
         android:text="@string/id_list"
         android:textColor="#FFFFFF"
         android:textIsSelectable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintTop_toBottomOf="@+id/FilterItems"
+        app:layout_constraintVertical_bias="0.085"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
 
         android:id="@+id/ItemIdSearch"
         android:layout_width="130dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/enter_item_id"
@@ -35,25 +49,22 @@
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintVertical_bias="0.046" />
 
     <Button
         android:id="@+id/searchBtn"
         android:layout_width="99dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="342dp"
+        android:layout_marginBottom="648dp"
         android:backgroundTint="#0082F0"
         android:text="@string/search"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.945"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toStartOf="@+id/logo"
+        app:layout_constraintStart_toEndOf="@+id/ItemIdSearch" />
 
     <ImageView
         android:id="@+id/logo"
@@ -67,5 +78,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.026"
         app:srcCompat="@drawable/newlogosimplewhite" />
+
+    <Spinner
+        android:id="@+id/FilterItems"
+        android:layout_width="217dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="120dp"
+        android:background="#B52323"
+        android:backgroundTint="#C0C0C0  "
+        android:contentDescription="@string/select_item_type"
+        android:foregroundTint="#C8C1C1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
