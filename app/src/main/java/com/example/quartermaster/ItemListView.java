@@ -1,8 +1,7 @@
 package com.example.quartermaster;
 
-import static android.graphics.Typeface.BOLD;
 
-import android.graphics.fonts.Font;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.widget.Button;
@@ -25,7 +24,7 @@ public class ItemListView extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     Button mItemViewBtn;
-    TextView mUID, mEnterId, mItemInfo;
+    TextView mUID, mEnterId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +35,6 @@ public class ItemListView extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         mUID = findViewById(R.id.UID);
         mEnterId = findViewById(R.id.ItemIdSearch);
-        mItemInfo = findViewById(R.id.ItemInfo);
 
 
         mUID.setText(Html.fromHtml("<b>Item ID's:</b>"));
@@ -58,7 +56,6 @@ public class ItemListView extends AppCompatActivity {
                                 mUID.append("\n -> ");
                                 mUID.append(document.getId());
                                 Map<String, Object> map = document2.getData();
-                                mItemInfo.setText("");
                                 assert map != null;
                                 for (Map.Entry<String, Object> entry : map.entrySet()) {
                                     mUID.append("\n");
@@ -77,28 +74,12 @@ public class ItemListView extends AppCompatActivity {
         });
 
 
-//        mItemViewBtn.setOnClickListener(v -> {
-//            fStore.collection("Items").document(mEnterId.getText().toString()).get().addOnCompleteListener(task -> {
-//                if (task.isSuccessful()) {
-//                    DocumentSnapshot document = task.getResult();
-//                    if (document.exists()) {
-//
-//                        Map<String, Object> map = document.getData();
-//                        mItemInfo.setText("");
-//                        assert map != null;
-//                        for (Map.Entry<String, Object> entry : map.entrySet()) {
-//                            mItemInfo.append("\n -> ");
-//                            mItemInfo.append(entry.getValue().toString());
-//
-//
-//                        }
-//                    }
-//                } else {
-//                    Toast.makeText(ItemListView.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();
-//
-//                }
-//            });
-//        });
+        mItemViewBtn.setOnClickListener(v -> {
+            String Uid = mEnterId.getText().toString();
+            Intent i = new Intent(getApplicationContext(), ItemView.class);
+            i.putExtra("Uid", Uid);
+            startActivity(i);
+        });
     }
 
 
