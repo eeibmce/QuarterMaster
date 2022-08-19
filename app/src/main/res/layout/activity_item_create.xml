@@ -11,14 +11,13 @@
         android:id="@+id/CreateBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="244dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="#0082F0"
         android:text="@string/create_item"
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Quantity"
+        app:layout_constraintTop_toBottomOf="@+id/ExtraInfo"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Spinner
@@ -64,7 +63,7 @@
         android:layout_width="340dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        android:autofillHints="Password"
+        android:autofillHints="Desired Quantity"
         android:background="#2D2D2D"
         android:ems="10"
         android:hint="@string/quantity"
@@ -78,5 +77,24 @@
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ItemType" />
+
+    <EditText
+        android:id="@+id/ExtraInfo"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints="Desired Quantity"
+        android:background="#2D2D2D"
+        android:ems="10"
+        android:hint="@string/extra_info"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Quantity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

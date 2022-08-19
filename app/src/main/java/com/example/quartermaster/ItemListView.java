@@ -50,55 +50,55 @@ public class ItemListView extends AppCompatActivity {
         itemViewSpinner.setAdapter(myAdapter);
 
         mFilterBtn.setOnClickListener(v -> {
-                    String itemType = itemViewSpinner.getSelectedItem().toString();
-                    // Checks that item is elected
-                    if (TextUtils.isEmpty(itemType)) {
-                        Toast.makeText(ItemListView.this, "Must Select ItemType", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-                    mUID.setText(Html.fromHtml("<b>Item ID's:</b>"));
+            String itemType = itemViewSpinner.getSelectedItem().toString();
+            // Checks that item is elected
+            if (TextUtils.isEmpty(itemType)) {
+                Toast.makeText(ItemListView.this, "Must Select ItemType", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            mUID.setText(Html.fromHtml("<b>Item ID's:</b>"));
 
-                    fStore.collection("Items").get().addOnCompleteListener(task -> {
-                        if (task.isSuccessful()) {
-                            ArrayList<QueryDocumentSnapshot> docList = new ArrayList<>();
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                docList.add(document);
+            fStore.collection("Items").get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    ArrayList<QueryDocumentSnapshot> docList = new ArrayList<>();
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        docList.add(document);
 
-                                fStore.collection("Items").document(document.getId()).get().addOnCompleteListener(tasks -> {
-                                    if (tasks.isSuccessful()) {
-                                        DocumentSnapshot document2 = tasks.getResult();
-                                        if (document2.exists()) {
+                        fStore.collection("Items").document(document.getId()).get().addOnCompleteListener(tasks -> {
+                            if (tasks.isSuccessful()) {
+                                DocumentSnapshot document2 = tasks.getResult();
+                                if (document2.exists()) {
 
-                                            Map<String, Object> map = document2.getData();
-                                            assert map != null;
-                                            for (Map.Entry<String, Object> entry : map.entrySet()) {
-                                                if (entry.getValue().equals(itemType)) {
-                                                    mUID.append("\n");
-                                                    mUID.append("\n -> ");
-                                                    mUID.append(document.getId());
+                                    Map<String, Object> map = document2.getData();
+                                    assert map != null;
+                                    for (Map.Entry<String, Object> entry : map.entrySet()) {
+                                        if (entry.getValue().equals(itemType)) {
+                                            mUID.append("\n");
+                                            mUID.append("\n -> ");
+                                            mUID.append(document.getId());
 
-                                                    mUID.append("\n");
-
-
-                                                    mUID.append(map.get("ItemType").toString().toUpperCase(Locale.ROOT));
-                                                    mUID.append("\n");
-                                                    mUID.append(map.get("OwnerEmail").toString().toUpperCase(Locale.ROOT));
+                                            mUID.append("\n");
 
 
-                                                }
+                                            mUID.append(map.get("ItemType").toString().toUpperCase(Locale.ROOT));
+                                            mUID.append("\n");
+                                            mUID.append(map.get("OwnerEmail").toString().toUpperCase(Locale.ROOT));
 
-                                            }
+
                                         }
-                                    } else {
-                                        Toast.makeText(ItemListView.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();
 
                                     }
-                                });
-                            }
-                        }
-                    });
+                                }
+                            } else {
+                                Toast.makeText(ItemListView.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();
 
-                });
+                            }
+                        });
+                    }
+                }
+            });
+
+        });
         mItemViewBtn.setOnClickListener(v -> {
             String Uid = mEnterId.getText().toString();
             Intent i = new Intent(getApplicationContext(), ItemView.class);

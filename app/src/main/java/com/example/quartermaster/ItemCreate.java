@@ -22,7 +22,7 @@ public class ItemCreate extends AppCompatActivity {
 
     Button mCreateBtn;
     Spinner mItemType;
-    EditText mQuantity;
+    EditText mQuantity, mExtraInfo;
     FirebaseAuth fAuth;
 
     @Override
@@ -37,6 +37,7 @@ public class ItemCreate extends AppCompatActivity {
         mCreateBtn = findViewById(R.id.CreateBtn);
         mItemType = findViewById(R.id.ItemType);
         mQuantity = findViewById(R.id.Quantity);
+        mExtraInfo = findViewById(R.id.ExtraInfo);
 
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(ItemCreate.this,
@@ -51,7 +52,8 @@ public class ItemCreate extends AppCompatActivity {
                 Toast.makeText(ItemCreate.this, "Must Select ItemType", Toast.LENGTH_SHORT).show();
                 return;
             }
-
+            // Extra info
+            String extraInfo = mExtraInfo.getText().toString().trim();
 
             // Get email
             assert user != null;
@@ -60,9 +62,10 @@ public class ItemCreate extends AppCompatActivity {
             Map<String, Object> item = new HashMap<>();
             item.put("ItemType", itemType);
             item.put("OwnerEmail", email);
+            item.put("ExtraInfo", extraInfo);
             String stquantity = mQuantity.getText().toString();
             int quantity = Integer.parseInt(stquantity);
-            if (quantity > 100){
+            if (quantity > 100) {
                 mQuantity.setError("Only 100 or less items may be added at a time");
             }
             for (int n = quantity; n > 0; n--) {
