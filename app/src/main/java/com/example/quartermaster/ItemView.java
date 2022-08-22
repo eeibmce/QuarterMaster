@@ -53,9 +53,9 @@ public class ItemView extends AppCompatActivity {
             }
         });
         mtoEditItemBtn.setOnClickListener(v -> {
-        Intent i = new Intent(getApplicationContext(), ItemEdit.class);
-        i.putExtra("Uid", Uid);
-        startActivity(i);
+            Intent i = new Intent(getApplicationContext(), ItemEdit.class);
+            i.putExtra("Uid", Uid);
+            startActivity(i);
         });
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.quartermaster" >
+    package="com.example.quartermaster">
 
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -22,7 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuarterMaster"
         tools:overrideLibrary="com.google.zxing.client.android"
-        tools:targetApi="30" >
+        tools:targetApi="30">
         <activity
             android:name=".ItemEdit"
             android:exported="false" />
@@ -55,7 +55,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashPage"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

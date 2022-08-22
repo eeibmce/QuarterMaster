@@ -2,7 +2,8 @@ package com.example.quartermaster;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,8 +13,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -60,6 +59,22 @@ public class ItemEdit extends AppCompatActivity {
             if (task.isSuccessful()) {
                 DocumentSnapshot document = task.getResult();
                 if (document.exists()) {
+                    // Set edit fields as currently saved
+                    String ItemType = document.getString("ItemType");
+                    String OwnerEmail = document.getString("OwnerEmail");
+                    String ExtraInfo = document.getString("ExtraInfo");
+
+                    mItemId.setText(Uid);
+                    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                            R.array.ListofItems, android.R.layout.simple_list_item_1);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    mEditItemType.setAdapter(adapter);
+                    if (ItemType != null) {
+                        int spinnerPosition = adapter.getPosition(ItemType);
+                        mEditItemType.setSelection(spinnerPosition);
+                        mEditOwnerEmail.setText(OwnerEmail);
+                        mEditExtraInfo.setText(ExtraInfo);
+                    }
 
                 } else {
                     Toast.makeText(getApplicationContext(), "Document Not Found", Toast.LENGTH_SHORT).show();
@@ -69,39 +84,38 @@ public class ItemEdit extends AppCompatActivity {
             }
         });
 
-        // Set edit fields as currently saved
-        mItemId.setText(Uid);
-        String compareValue = docRef.get("ItemType", itemType);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.ListofItems, android.R.layout.simple_list_item_1);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mEditItemType.setAdapter(adapter);
-        if (compareValue != null) {
-            int spinnerPosition = adapter.getPosition(compareValue);
-            mEditItemType.setSelection(spinnerPosition);
-        }
+
         mEditBtn.setOnClickListener(v -> {
+            //Get updated values
+            String itemType = mEditItemType.getSelectedItem().toString();
+            String email = mEditOwnerEmail.getText().toString().trim();
+            String extraInfo = mEditExtraInfo.getText().toString().trim();
+            if (TextUtils.isEmpty(email)) {
+                mEditOwnerEmail.setError("Email is Required.");
+                return;
+            }if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                mEditOwnerEmail.setError("Invalid Email Address");
+                return;
+            }
+
+
+            //Adding categories to item on firestore
+            Map<String, Object> item = new HashMap<>();
+            item.put("ItemType", itemType);
+            item.put("OwnerEmail", email);
+            item.put("ExtraInfo", extraInfo);
+            // Edit Document
+            db.collection("Items").document(Uid)
+                    .set(item)
+                    .addOnSuccessListener(documentReference -> {
+                        Toast.makeText(ItemEdit.this, "Item successfully Updated", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(getApplicationContext(), HomePage.class);
+                        startActivity(i);
+                    })
+                    .addOnFailureListener(e -> Toast.makeText(ItemEdit.this, "Item could not be added", Toast.LENGTH_SHORT).show());
         });
 
-        // Extra info
-        String extraInfo = mEditExtraInfo.getText().toString().trim();
 
-        // Get email
-        String email = mEditOwnerEmail.getText().toString().trim();
-        //Adding categories to item on firestore
-        Map<String, Object> item = new HashMap<>();
-        item.put("ItemType", mEditItemType);
-        item.put("OwnerEmail", email);
-        item.put("ExtraInfo", extraInfo);
-        // Edit Document
-        db.collection("Items").document(Uid)
-                .set(item)
-                .addOnSuccessListener(documentReference -> {
-                    Toast.makeText(ItemEdit.this, "Item successfully Updated", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(getApplicationContext(), HomePage.class);
-                    startActivity(i);
-                })
-                .addOnFailureListener(e -> Toast.makeText(ItemEdit.this, "Item could not be added", Toast.LENGTH_SHORT).show());
     }
 }
 
