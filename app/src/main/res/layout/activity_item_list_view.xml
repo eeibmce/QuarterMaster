@@ -13,16 +13,24 @@
         android:layout_height="51dp"
         android:backgroundTint="#0082F0"
         android:text="@string/filter"
-        android:textColor="@color/white"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="241dp" />
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toEndOf="@+id/SearchBar"
+        app:layout_constraintTop_toBottomOf="@+id/searchBtn"
+        app:layout_constraintVertical_bias="0.014" />
 
     <TextView
         android:id="@+id/UID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:isScrollContainer="true"
         android:minWidth="48dp"
         android:minHeight="48dp"
+        android:overScrollMode="always"
+        android:scrollbars="vertical"
         android:selectAllOnFocus="true"
         android:text="@string/id_list"
         android:textColor="#FFFFFF"
@@ -31,17 +39,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SearchBar"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintVertical_bias="0.034" />
 
     <EditText
         android:id="@+id/ItemIdSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="140dp"
+        android:layout_width="164dp"
+        android:layout_height="53dp"
         android:autofillHints="firstname.lastname@ericsson.com"
         android:background="#2D2D2D"
         android:ems="10"
@@ -52,8 +58,12 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
 
     <Button
         android:id="@+id/searchBtn"
@@ -61,75 +71,75 @@
         android:layout_height="51dp"
         android:backgroundTint="#0082F0"
         android:text="@string/search"
-        android:textColor="@color/white"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="140dp" />
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toEndOf="@+id/ItemIdSearch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:contentDescription="@string/quartermaster_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.856"
+        app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
     <Spinner
         android:id="@+id/SearchBar"
         android:layout_width="163dp"
         android:layout_height="48dp"
-        android:layout_marginTop="56dp"
         android:background="#B52323"
         android:backgroundTint="#C0C0C0  "
         android:contentDescription="@string/select_item_type"
         android:foregroundTint="#C8C1C1"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="256dp"
-        android:layout_height="45dp"
-        android:fontFamily="@font/ericsson"
-        android:text="TextView"
-        android:text="@string/app_name"
-        android:textColor="@color/white"
-        android:textSize="27sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <Button
+        android:id="@+id/ItemCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0082F0"
+        android:text="Create Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="0.976" />
 
-
-    <!--    <EditText-->
-    <!--        android:id="@+id/SearchBar"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginStart="16dp"-->
-    <!--        android:layout_marginTop="28dp"-->
-    <!--        android:autofillHints="firstname.lastname@ericsson.com"-->
-    <!--        android:background="#2D2D2D"-->
-    <!--        android:ems="10"-->
-    <!--        android:hint="@string/search"-->
-    <!--        android:inputType="text"-->
-    <!--        android:minHeight="48dp"-->
-    <!--        android:padding="10dp"-->
-    <!--        android:textColor="@color/white"-->
-    <!--        android:textColorHint="@color/white"-->
-    <!--        android:textSize="14sp"-->
-    <!--        app:layout_constraintEnd_toStartOf="@+id/filterBtn"-->
-    <!--        app:layout_constraintHorizontal_bias="0.0"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch" />-->
+<!--        <EditText-->
+<!--            android:id="@+id/SearchBar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="28dp"-->
+<!--            android:autofillHints="firstname.lastname@ericsson.com"-->
+<!--            android:background="#2D2D2D"-->
+<!--            android:ems="10"-->
+<!--            android:hint="@string/search"-->
+<!--            android:inputType="text"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textColorHint="@color/white"-->
+<!--            android:textSize="14sp"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/filterBtn"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
