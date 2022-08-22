@@ -2,7 +2,6 @@ package com.example.quartermaster;
 
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.ArrayAdapter;
@@ -46,10 +45,7 @@ public class ItemListView extends AppCompatActivity {
 
         mFilterBtn.setOnClickListener(v -> {
             String search = mSearchBar.getSelectedItem().toString().trim();
-            mUID.setTypeface(mUID.getTypeface(), Typeface.BOLD);
-            mUID.setText("Item ID's");
-            mUID.setTypeface(mUID.getTypeface(), Typeface.NORMAL);
-
+            mUID.setText("");
 
             db.collection("Items")
                     .whereEqualTo("ItemType", search)
@@ -57,6 +53,7 @@ public class ItemListView extends AppCompatActivity {
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
+
                                 mUID.append("\n");
                                 mUID.append(document.getId());
                                 mUID.append("\n");

@@ -38,15 +38,15 @@ public class ItemView extends AppCompatActivity {
             if (task.isSuccessful()) {
                 DocumentSnapshot document = task.getResult();
                 if (document.exists()) {
-
-                    Map<String, Object> map = document.getData();
                     mItemInfo.setText("");
                     mItemInfo.append(document.getId());
-                    assert map != null;
-                    for (Map.Entry<String, Object> entry : map.entrySet()) {
-                        mItemInfo.append("\n");
-                        mItemInfo.append(entry.getValue().toString());
-                    }
+                    mItemInfo.append("\n");
+                    mItemInfo.append(document.getString("ItemType"));
+                    mItemInfo.append("\n");
+                    mItemInfo.append(document.getString("OwnerEmail"));
+                    mItemInfo.append("\n");
+                    mItemInfo.append(document.getString("ExtraInfo"));
+                    mItemInfo.append("\n");
                 }
             } else {
                 Toast.makeText(ItemView.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();
