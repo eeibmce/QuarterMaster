@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +22,8 @@ public class ItemListView extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     Button mItemViewBtn, mFilterBtn;
-    TextView mUID, mEnterId, mSearchBar;
+    TextView mUID, mEnterId; //mSearchBar;
+    Spinner mSearchBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +38,14 @@ public class ItemListView extends AppCompatActivity {
         mSearchBar = findViewById(R.id.SearchBar);
         mFilterBtn = findViewById(R.id.filterBtn);
 
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<>(ItemListView.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.ListofItems));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mSearchBar.setAdapter(myAdapter);
+
 
         mFilterBtn.setOnClickListener(v -> {
-            String search = mSearchBar.getText().toString().trim();
+            String search = mSearchBar.getSelectedItem().toString().trim();
             mUID.setTypeface(mUID.getTypeface(), Typeface.BOLD);
             mUID.setText("Item ID's");
             mUID.setTypeface(mUID.getTypeface(), Typeface.NORMAL);
@@ -49,7 +57,6 @@ public class ItemListView extends AppCompatActivity {
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                System.out.println(document.getId() + " => " + document.getData());
                                 mUID.append("\n");
                                 mUID.append(document.getId());
                                 mUID.append("\n");
