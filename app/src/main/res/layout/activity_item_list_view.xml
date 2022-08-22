@@ -11,22 +11,20 @@
         android:id="@+id/filterBtn"
         android:layout_width="99dp"
         android:layout_height="51dp"
+        android:layout_marginEnd="72dp"
         android:layout_marginBottom="556dp"
         android:backgroundTint="#0082F0"
         android:text="@string/filter"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toEndOf="@+id/FilterItems"
         app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/UID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:selectAllOnFocus="true"
         android:text="@string/id_list"
         android:textColor="#FFFFFF"
@@ -35,8 +33,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FilterItems"
-        app:layout_constraintVertical_bias="0.082"
+        app:layout_constraintTop_toBottomOf="@+id/SearchBar"
+        app:layout_constraintVertical_bias="0.118"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
@@ -49,7 +47,7 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/enter_item_id"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,17 +77,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
-    <Spinner
-        android:id="@+id/FilterItems"
-        android:layout_width="217dp"
-        android:layout_height="54dp"
+    <EditText
+        android:id="@+id/SearchBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
-        android:background="#B52323"
-        android:backgroundTint="#C0C0C0  "
-        android:contentDescription="@string/select_item_type"
-        android:foregroundTint="#C8C1C1"
-        android:textColor="@color/white"
+        android:layout_marginTop="32dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/search"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/filterBtn"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch" />
 
