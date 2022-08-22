@@ -2,6 +2,7 @@ package com.example.quartermaster;
 
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.TextUtils;
@@ -56,7 +57,9 @@ public class ItemListView extends AppCompatActivity {
                 Toast.makeText(ItemListView.this, "Must Select ItemType", Toast.LENGTH_SHORT).show();
                 return;
             }
-            mUID.setText(Html.fromHtml("<b>Item ID's:</b>"));
+            mUID.setTypeface(mUID.getTypeface(), Typeface.BOLD);
+            mUID.setText("Item ID's");
+            mUID.setTypeface(mUID.getTypeface(), Typeface.NORMAL);
 
             fStore.collection("Items").get().addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {

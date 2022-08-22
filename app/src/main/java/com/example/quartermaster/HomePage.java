@@ -17,8 +17,8 @@ public class HomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        View mitemsBtn = findViewById(R.id.toItems);
-        View mprofileBtn = findViewById(R.id.toProfile);
+        View mItemsBtn = findViewById(R.id.toItems);
+        View mProfileBtn = findViewById(R.id.toProfile);
         View qrOptions = findViewById(R.id.toQr);
 
         //Check if user is logged in
@@ -42,13 +42,13 @@ public class HomePage extends AppCompatActivity {
         }
 
 
-        mitemsBtn.setOnClickListener(v -> {
+        mItemsBtn.setOnClickListener(v -> {
 
             startActivity(new Intent(getApplicationContext(), ItemCreate.class));
 
         });
 
-        mprofileBtn.setOnClickListener(v -> {
+        mProfileBtn.setOnClickListener(v -> {
 
             startActivity(new Intent(getApplicationContext(), Profile.class));
 

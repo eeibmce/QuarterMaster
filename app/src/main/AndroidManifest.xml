@@ -22,7 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuarterMaster"
         tools:overrideLibrary="com.google.zxing.client.android"
-        tools:targetApi="30">
+        tools:targetApi="32">
         <activity
             android:name=".ItemEdit"
             android:exported="false" />
