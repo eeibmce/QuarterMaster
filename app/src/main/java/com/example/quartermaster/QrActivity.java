@@ -35,9 +35,10 @@ public class QrActivity extends AppCompatActivity {
         btGenerate = findViewById(R.id.bt_generate);
         ivOutput = findViewById(R.id.iv_output);
         btScan = findViewById(R.id.bt_scan);
+        String Uid = getIntent().getExtras().getString("Uid").trim();
+        etInput.setText(Uid);
         //Generate code
         btGenerate.setOnClickListener(view -> {
-
             String sText = etInput.getText().toString().trim();
             if (TextUtils.isEmpty(sText)) {
                 etInput.setError("Must provide text to be encoded");
