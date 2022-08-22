@@ -77,9 +77,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="25dp"
+                        android:scaleType="centerInside"
+                        android:gravity="center"                        android:maxWidth="64dp"
+                        android:maxHeight="64dp"
                         android:contentDescription="@string/qrscanner"
-                        android:src="@drawable/whiteqr" />
+                        android:src="@drawable/qrcode" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -103,9 +105,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="25dp"
+                        android:scaleType="centerInside"
+                        android:gravity="center"                        android:maxWidth="64dp"
+                        android:maxHeight="64dp"
                         android:contentDescription="@string/profile"
-                        android:src="@drawable/profile_64x64" />
+                        android:src="@drawable/account" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -131,9 +135,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="25dp"
+                        android:maxWidth="64dp"
+                        android:maxHeight="64dp"
                         android:contentDescription="@string/create_item"
-                        android:src="@drawable/laptopx64white" />
+                        android:src="@drawable/phonelaptop" />
 
 
                 </LinearLayout>
