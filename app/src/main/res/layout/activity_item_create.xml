@@ -17,8 +17,7 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ExtraInfo"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/ExtraInfo" />
 
     <Spinner
         android:id="@+id/ItemType"
@@ -46,17 +45,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
-    <ImageView
+    <TextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/app_name"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:fontFamily="@font/ericsson"
+        android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:srcCompat="@drawable/quartermaster" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <EditText
         android:id="@+id/Quantity"

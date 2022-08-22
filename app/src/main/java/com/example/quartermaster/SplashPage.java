@@ -44,15 +44,10 @@ public class SplashPage extends AppCompatActivity {
         fadeOut.setDuration(1800);
         ImageView image = findViewById(R.id.imageView8);
         image.setAnimation(fadeOut);
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                Intent intent = new Intent(SplashPage.this, HomePage.class);
-                startActivity(intent);
-                finish();
-            }
-
+        new Handler().postDelayed(() -> {
+            Intent intent = new Intent(SplashPage.this, HomePage.class);
+            startActivity(intent);
+            finish();
         }, SPLASH_SCREEN_TIMEOUT);
     }
 }
