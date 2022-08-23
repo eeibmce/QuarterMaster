@@ -88,7 +88,7 @@ public class QrActivity extends AppCompatActivity {
         btSave.setOnClickListener(view -> {
             File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
             String sText = etInput.getText().toString().trim();
-            String fname = "Qr" + sText + ".jpg";
+            String fname = "Qr-" + sText + ".jpg";
             File file = new File(path, fname);
             path.mkdirs();
             Bitmap bmap = Bitmap.createBitmap(ivOutput.getWidth(), ivOutput.getHeight(), Bitmap.Config.RGB_565);
