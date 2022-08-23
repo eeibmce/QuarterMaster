@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.TextUtils;
@@ -27,7 +26,6 @@ import com.journeyapps.barcodescanner.ScanOptions;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.util.Random;
 
 public class QrActivity extends AppCompatActivity {
 
@@ -88,21 +86,14 @@ public class QrActivity extends AppCompatActivity {
         });
 
         btSave.setOnClickListener(view -> {
-
-            String root = Environment.getExternalStorageDirectory().toString();
-            File myDir = new File(root + "/QrCodes/");
-            myDir.mkdirs();
-            Random generator = new Random();
-            int n = 10000;
-            n = generator.nextInt(n);
-            String fname = "Image-" + n + ".jpg";
-            File file = new File(myDir, fname);
+            File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+            String sText = etInput.getText().toString().trim();
+            String fname = "Qr" + sText + ".jpg";
+            File file = new File(path, fname);
+            path.mkdirs();
             Bitmap bmap = Bitmap.createBitmap(ivOutput.getWidth(), ivOutput.getHeight(), Bitmap.Config.RGB_565);
             Canvas canvas = new Canvas(bmap);
             ivOutput.draw(canvas);
-//                ivOutput.setDrawingCacheEnabled(true);
-//                ivOutput.buildDrawingCache();
-//                Bitmap bmap = ivOutput.getDrawingCache();
             if (file.exists())
                 file.delete();
             try {
@@ -110,37 +101,11 @@ public class QrActivity extends AppCompatActivity {
                 bmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
                 out.flush();
                 out.close();
+                Toast.makeText(this, "QrCode Saved", Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
                 e.printStackTrace();
                 Toast.makeText(this, "Save Failed", Toast.LENGTH_SHORT).show();
             }
-//            try {
-//                String path = Environment.getExternalStorageDirectory().toString();
-//                OutputStream fOutputStream = null;
-//                File QrCode = new File(path + "/QrCodes/", "QrCode.jpg");
-//                if (!QrCode.exists()) {
-//                    QrCode.mkdirs();
-//                }
-//                ivOutput.setDrawingCacheEnabled(true);
-//                ivOutput.buildDrawingCache();
-//                Bitmap bmap = ivOutput.getDrawingCache();
-//                fOutputStream = new FileOutputStream(QrCode);
-//
-//                bmap.compress(Bitmap.CompressFormat.JPEG, 100, fOutputStream);
-//
-//                fOutputStream.flush();
-//                fOutputStream.close();
-//
-//                MediaStore.Images.Media.insertImage(getContentResolver(), QrCode.getAbsolutePath(), QrCode.getName(), QrCode.getName());
-//            } catch (FileNotFoundException e) {
-//                e.printStackTrace();
-//                Toast.makeText(this, "Save Failed", Toast.LENGTH_SHORT).show();
-//                return;
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//                Toast.makeText(this, "Save Failed", Toast.LENGTH_SHORT).show();
-//                return;
-//            }
         });
     }
 

@@ -14,14 +14,13 @@
         android:id="@+id/et_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="144dp"
         android:autofillHints=""
         android:background="@android:drawable/editbox_background"
         android:hint="@string/enter_item_id"
         android:inputType="text"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ericsson"
-        android:text="QuarterMaster"
+        android:text="@string/app_name"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -57,14 +56,15 @@
         android:id="@+id/bt_generate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
         android:backgroundTint="#0082F0"
         android:text="@string/generate"
         android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/iv_output"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_input" />
+        app:layout_constraintTop_toBottomOf="@+id/et_input"
+        app:layout_constraintVertical_bias="0.427" />
 
     <Button
         android:id="@+id/bt_scan"
@@ -86,8 +86,9 @@
         android:backgroundTint="#0082F0"
         android:text="@string/save_as_jpeg"
         android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/bt_scan"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_output" />
 
@@ -100,6 +101,7 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
