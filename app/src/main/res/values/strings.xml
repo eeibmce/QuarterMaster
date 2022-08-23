@@ -55,4 +55,6 @@
     <string name="edit_item">Edit Item</string>
     <string name="itemid">ItemID</string>
     <string name="qrgeneration">Qr-Generation</string>
+    <string name="save_as_jpeg">Save as Jpeg</string>
+    <string name="qractions">QrActions</string>
 </resources>
