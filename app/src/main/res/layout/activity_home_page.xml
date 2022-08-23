@@ -56,11 +56,13 @@
             android:paddingTop="24dp"
             android:paddingRight="16dp"
             android:paddingBottom="8dp">
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/toQr"
                     android:layout_width="match_parent"
@@ -70,27 +72,28 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/bg_blue"
                     android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:contentDescription="@string/qrscanner"
+                        android:contentDescription="@string/qractions"
                         android:gravity="center"
                         android:maxWidth="64dp"
                         android:maxHeight="64dp"
                         android:scaleType="centerInside"
                         android:src="@drawable/qrcode" />
                 </LinearLayout>
+
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="146dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ericsson"
                     android:gravity="center"
-                    android:text="QR Code"
-                    android:textSize="20sp"
+                    android:text="@string/qractions"
                     android:textColor="@color/white"
-                    android:textStyle="bold">
-                </TextView>
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -98,6 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/toProfile"
                     android:layout_width="match_parent"
@@ -107,6 +111,7 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/bg_blue"
                     android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -118,16 +123,16 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/account" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ericsson"
                     android:gravity="center"
-                    android:text="Profile"
-                    android:textSize="20sp"
+                    android:text="@string/profile"
                     android:textColor="@color/white"
-                    android:textStyle="bold">
-                </TextView>
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -146,6 +151,7 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/bg_blue"
                     android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -155,16 +161,16 @@
                         android:maxHeight="64dp"
                         android:src="@drawable/phonelaptop" />
                 </LinearLayout>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/ericsson"
                     android:gravity="center"
-                    android:text="Devices"
-                    android:textSize="20sp"
+                    android:text="@string/devices"
                     android:textColor="@color/white"
-                    android:textStyle="bold">
-                </TextView>
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
 
