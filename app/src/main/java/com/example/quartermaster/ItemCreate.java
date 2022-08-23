@@ -74,7 +74,7 @@ public class ItemCreate extends AppCompatActivity {
                         .add(item)
                         .addOnSuccessListener(documentReference -> {
                             Toast.makeText(ItemCreate.this, "Item successfully added", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(getApplicationContext(), HomePage.class);
+                            Intent i = new Intent(getApplicationContext(), ItemListView.class);
                             startActivity(i);
                         })
                         .addOnFailureListener(e -> Toast.makeText(ItemCreate.this, "Item could not be added", Toast.LENGTH_SHORT).show());

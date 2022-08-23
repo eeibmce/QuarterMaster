@@ -1,25 +1,25 @@
-package com.example.quartermaster;
-
-class Phone {
-    private final String model;
-    private final String storage;
-    private final String modelNumber;
-    private final String brand;
-    private final String colour;
-    private final String nameOwner;
-
-
-    public Phone(String model, String storage, String modelNumber, String brand, String colour, String nameOwner) {
-        this.model = model;
-        this.storage = storage;
-        this.modelNumber = modelNumber;
-        this.brand = brand;
-        this.colour = colour;
-        this.nameOwner = nameOwner;
-
-    }
-
-
+//package com.example.quartermaster;
+//
+//class Phone {
+//    private final String model;
+//    private final String storage;
+//    private final String modelNumber;
+//    private final String brand;
+//    private final String colour;
+//    private final String nameOwner;
+//
+//
+//    public Phone(String model, String storage, String modelNumber, String brand, String colour, String nameOwner) {
+//        this.model = model;
+//        this.storage = storage;
+//        this.modelNumber = modelNumber;
+//        this.brand = brand;
+//        this.colour = colour;
+//        this.nameOwner = nameOwner;
+//
+//    }
+//
+//
 //    @Override
 //    public String toString() {
 //        return "Phones{" +
@@ -103,4 +103,4 @@ class Phone {
 //        Phone iphone = new Phone(model,storage, modelNumber, brand, colour, nameOwner);
 //        System.out.print(iphone);
 //    }
-}
+//}

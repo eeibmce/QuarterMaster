@@ -44,7 +44,7 @@ public class HomePage extends AppCompatActivity {
 
         mItemsBtn.setOnClickListener(v -> {
 
-            startActivity(new Intent(getApplicationContext(), ItemCreate.class));
+            startActivity(new Intent(getApplicationContext(), ItemListView.class));
 
         });
 

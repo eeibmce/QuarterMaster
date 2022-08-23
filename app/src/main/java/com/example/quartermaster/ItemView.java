@@ -12,15 +12,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.Map;
-
 public class ItemView extends AppCompatActivity {
 
 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     TextView mItemInfo;
-    Button mtoEditItemBtn;
+    Button mtoEditItemBtn, mtoQrActivityBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +28,7 @@ public class ItemView extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         mItemInfo = findViewById(R.id.ItemInfo);
         mtoEditItemBtn = findViewById(R.id.toEditItemBtn);
+        mtoQrActivityBtn = findViewById(R.id.toQrActivityBtn);
 
         String Uid = getIntent().getExtras().getString("Uid").trim();
 
@@ -54,6 +53,11 @@ public class ItemView extends AppCompatActivity {
         });
         mtoEditItemBtn.setOnClickListener(v -> {
             Intent i = new Intent(getApplicationContext(), ItemEdit.class);
+            i.putExtra("Uid", Uid);
+            startActivity(i);
+        });
+        mtoQrActivityBtn.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(), QrActivity.class);
             i.putExtra("Uid", Uid);
             startActivity(i);
         });

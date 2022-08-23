@@ -1,34 +1,34 @@
-package com.example.quartermaster;
-
-public class Laptop {
-    private final String ScreenSize;
-    private final String Make;
-    private final String Model;
-    private final String UUID;
-    private final String Processor;
-    private final String Weight;
-    private final String OperatingSystem;
-    private final String Battery;
-    private final String Owner;
-    private final String Storage;
-    private final String ModelNo;
-    private final String RAM;
-
-    public Laptop(String ScreenSize, String Make, String Model, String UUID, String Processor, String Weight, String OperatingSystem, String Battery, String RAM, String Owner, String Storage, String ModelNo) {
-        this.ScreenSize = ScreenSize;
-        this.Make = Make;
-        this.Model = Model;
-        this.UUID = UUID;
-        this.Processor = Processor;
-        this.Weight = Weight;
-        this.OperatingSystem = OperatingSystem;
-        this.Battery = Battery;
-        this.Owner = Owner;
-        this.Storage = Storage;
-        this.ModelNo = ModelNo;
-        this.RAM = RAM;
-    }
-
+//package com.example.quartermaster;
+//
+//public class Laptop {
+//    private final String ScreenSize;
+//    private final String Make;
+//    private final String Model;
+//    private final String UUID;
+//    private final String Processor;
+//    private final String Weight;
+//    private final String OperatingSystem;
+//    private final String Battery;
+//    private final String Owner;
+//    private final String Storage;
+//    private final String ModelNo;
+//    private final String RAM;
+//
+//    public Laptop(String ScreenSize, String Make, String Model, String UUID, String Processor, String Weight, String OperatingSystem, String Battery, String RAM, String Owner, String Storage, String ModelNo) {
+//        this.ScreenSize = ScreenSize;
+//        this.Make = Make;
+//        this.Model = Model;
+//        this.UUID = UUID;
+//        this.Processor = Processor;
+//        this.Weight = Weight;
+//        this.OperatingSystem = OperatingSystem;
+//        this.Battery = Battery;
+//        this.Owner = Owner;
+//        this.Storage = Storage;
+//        this.ModelNo = ModelNo;
+//        this.RAM = RAM;
+//    }
+//
 //    @Override
 //    public String toString() {
 //        return "Laptops{" +
@@ -148,12 +148,6 @@ public class Laptop {
 //        String Camera = in.next();
 //        System.out.println("Storage =");
 //        String Storage = in.next();
-//    }
-}
-
-
-
-
-
-
+////    }
+//}
 

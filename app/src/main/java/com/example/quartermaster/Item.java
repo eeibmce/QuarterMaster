@@ -9,9 +9,11 @@ public class Item {
         this.itemOwnerEmail = itemOwnerEmail;
         this.itemType = itemType;
     }
+
     public String getItemOwnerEmail() {
         return itemOwnerEmail;
     }
+
     public String getItemType() {
         return itemType;
     }

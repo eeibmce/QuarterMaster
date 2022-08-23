@@ -91,7 +91,8 @@ public class ItemEdit extends AppCompatActivity {
             if (TextUtils.isEmpty(email)) {
                 mEditOwnerEmail.setError("Email is Required.");
                 return;
-            }if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            }
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                 mEditOwnerEmail.setError("Invalid Email Address");
                 return;
             }
