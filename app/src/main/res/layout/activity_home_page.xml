@@ -28,12 +28,12 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="104dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/quartermaster_logo"
         android:src="@drawable/logo200x"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appName" />
 
@@ -55,14 +55,12 @@
             android:paddingLeft="16dp"
             android:paddingTop="24dp"
             android:paddingRight="16dp"
-            android:paddingBottom="24dp">
-
+            android:paddingBottom="8dp">
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
                 <LinearLayout
                     android:id="@+id/toQr"
                     android:layout_width="match_parent"
@@ -72,7 +70,6 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/bg_blue"
                     android:orientation="vertical">
-
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -84,6 +81,16 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/qrcode" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ericsson"
+                    android:gravity="center"
+                    android:text="QR Code"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold">
+                </TextView>
             </LinearLayout>
 
             <LinearLayout
@@ -91,7 +98,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
                 <LinearLayout
                     android:id="@+id/toProfile"
                     android:layout_width="match_parent"
@@ -101,7 +107,6 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/bg_blue"
                     android:orientation="vertical">
-
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -113,6 +118,16 @@
                         android:scaleType="centerInside"
                         android:src="@drawable/account" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ericsson"
+                    android:gravity="center"
+                    android:text="Profile"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold">
+                </TextView>
             </LinearLayout>
 
             <LinearLayout
@@ -131,8 +146,6 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/bg_blue"
                     android:orientation="vertical">
-
-
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -141,11 +154,17 @@
                         android:maxWidth="64dp"
                         android:maxHeight="64dp"
                         android:src="@drawable/phonelaptop" />
-
-
                 </LinearLayout>
-
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ericsson"
+                    android:gravity="center"
+                    android:text="Devices"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold">
+                </TextView>
             </LinearLayout>
 
 

@@ -22,7 +22,7 @@ public class ItemListView extends AppCompatActivity {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     Button mItemViewBtn, mFilterBtn, mItemCreate;
-    TextView mUID, mEnterId; //mSearchBar;
+    TextView mUID, mEnterId;
     Spinner mSearchBar;
 
     @Override
@@ -61,7 +61,7 @@ public class ItemListView extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
 
-                                mUID.setText("");
+                                mUID.append("\n");
                                 mUID.append("ItemId: " + document.getId());
                                 mUID.append("\n");
                                 mUID.append("ItemType: " + document.getString("ItemType"));

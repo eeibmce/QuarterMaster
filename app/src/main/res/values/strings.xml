@@ -31,7 +31,7 @@
     <string name="owner_name">Owner Name</string>
     <string name="make">Make</string>
     <string name="quartermaster_logo">QuarterMaster Logo</string>
-    <string name="qrscanner">QrScanner</string>
+    <string name="qrscanner">Qr-Scanner</string>
     <string name="profile">Profile</string>
     <string name="create_item">Create Item</string>
     <string name="devices">Devices</string>
@@ -54,7 +54,5 @@
     <string name="extra_info">Extra Info</string>
     <string name="edit_item">Edit Item</string>
     <string name="itemid">ItemID</string>
-    <string name="qrgeneration">QrGeneration</string>
-    <string name="save_as_pdf">Save as Pdf</string>
-    <string name="save_as_jpeg">Save as Jpeg</string>
+    <string name="qrgeneration">Qr-Generation</string>
 </resources>
