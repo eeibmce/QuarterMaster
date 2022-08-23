@@ -16,16 +16,16 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintHorizontal_bias="0.831"
         app:layout_constraintStart_toEndOf="@+id/SearchBar"
         app:layout_constraintTop_toBottomOf="@+id/searchBtn"
-        app:layout_constraintVertical_bias="0.014" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <TextView
         android:id="@+id/UID"
 
-        android:layout_width="300dp"
-        android:layout_height="500dp"
+        android:layout_width="297dp"
+        android:layout_height="420dp"
         android:isScrollContainer="true"
         android:minWidth="48dp"
         android:minHeight="48dp"
@@ -39,10 +39,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SearchBar"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintVertical_bias="0.134" />
 
     <EditText
         android:id="@+id/ItemIdSearch"
@@ -60,10 +60,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.156" />
 
     <Button
         android:id="@+id/searchBtn"
@@ -74,10 +74,10 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toEndOf="@+id/ItemIdSearch"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.155" />
 
     <ImageView
         android:id="@+id/logo"
@@ -86,10 +86,10 @@
         android:contentDescription="@string/quartermaster_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
     <Spinner
@@ -103,10 +103,10 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <Button
         android:id="@+id/ItemCreate"
@@ -121,7 +121,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
 
-<!--        <EditText-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ericsson"
+        android:text="QuarterMaster"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <!--        <EditText-->
 <!--            android:id="@+id/SearchBar"-->
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->
