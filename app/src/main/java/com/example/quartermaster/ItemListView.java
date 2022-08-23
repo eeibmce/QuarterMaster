@@ -65,14 +65,14 @@ public class ItemListView extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
 
+                                mUID.setText("");
+                                mUID.append("ItemId: " + document.getId());
                                 mUID.append("\n");
-                                mUID.append(document.getId());
+                                mUID.append("ItemType: " + document.getString("ItemType"));
                                 mUID.append("\n");
-                                mUID.append(document.getString("ItemType"));
+                                mUID.append("OwnerEmail: " + document.getString("OwnerEmail"));
                                 mUID.append("\n");
-                                mUID.append(document.getString("OwnerEmail"));
-                                mUID.append("\n");
-                                mUID.append(document.getString("ExtraInfo"));
+                                mUID.append("ExtraInfo: " + document.getString("ExtraInfo"));
                                 mUID.append("\n");
                             }
                         } else {

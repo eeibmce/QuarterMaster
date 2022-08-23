@@ -55,7 +55,7 @@ public class QrActivity extends AppCompatActivity {
 //            }
             try {
                 BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
-                Bitmap bitmap = barcodeEncoder.encodeBitmap("content", BarcodeFormat.QR_CODE, 400, 400);
+                Bitmap bitmap = barcodeEncoder.encodeBitmap(sText, BarcodeFormat.QR_CODE, 400, 400);
                 ImageView imageViewQrCode = ivOutput;
                 imageViewQrCode.setImageBitmap(bitmap);
             } catch (Exception e) {
@@ -104,12 +104,11 @@ public class QrActivity extends AppCompatActivity {
     }
 
     // Register the launcher and result handler
-    private final ActivityResultLauncher<ScanOptions> barcodeLauncher = registerForActivityResult(new ScanContract(),
-            result -> {
+    public ActivityResultLauncher<ScanOptions> barcodeLauncher = registerForActivityResult(new ScanContract(), result -> {
                 if (result.getContents() == null) {
                     Toast.makeText(QrActivity.this, "Scan Failed", Toast.LENGTH_LONG).show();
                 } else {
-                    //Toast.makeText(QrActivity.this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(QrActivity.this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
                     String Uid = result.getContents();
                     Intent i = new Intent(getApplicationContext(), ItemView.class);
                     i.putExtra("Uid", Uid);
