@@ -16,7 +16,6 @@
 
     <!--SplashScreen-->
     <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/splashbackground</item>
         <item name="colorPrimary">@color/gray</item>
         <item name="colorPrimaryDark">@color/black</item>
         <item name="colorAccent">@color/cardview_dark_background</item>
