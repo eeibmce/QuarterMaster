@@ -46,6 +46,8 @@ public class ItemView extends AppCompatActivity {
                     mItemInfo.append("\n");
                     mItemInfo.append("ExtraInfo: " + document.getString("ExtraInfo"));
                     mItemInfo.append("\n");
+                    mItemInfo.append("RepairStatus: " + document.getString("RepairStatus"));
+                    mItemInfo.append("\n");
                 }
             } else {
                 Toast.makeText(ItemView.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();

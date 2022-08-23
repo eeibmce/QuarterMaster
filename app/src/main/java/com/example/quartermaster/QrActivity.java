@@ -101,7 +101,7 @@ public class QrActivity extends AppCompatActivity {
                 bmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
                 out.flush();
                 out.close();
-                Toast.makeText(this, "QrCode Saved", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "QrCode Saved to Pictures", Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
                 e.printStackTrace();
                 Toast.makeText(this, "Save Failed", Toast.LENGTH_SHORT).show();

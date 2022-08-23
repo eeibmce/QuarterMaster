@@ -24,7 +24,7 @@ import java.util.Map;
 public class ItemEdit extends AppCompatActivity {
 
     TextView mItemId;
-    Spinner mEditItemType;
+    Spinner mEditItemType, mEditRepairStatus;
     EditText mEditOwnerEmail, mEditExtraInfo;
     Button mEditBtn;
     FirebaseAuth fAuth;
@@ -42,6 +42,7 @@ public class ItemEdit extends AppCompatActivity {
         mEditItemType = findViewById(R.id.EditItemType);
         mEditOwnerEmail = findViewById(R.id.EditOwnerEmail);
         mEditExtraInfo = findViewById(R.id.EditExtraInfo);
+        mEditRepairStatus = findViewById(R.id.EditRepairStatus);
         mEditBtn = findViewById(R.id.EditItemBtn);
 
         String Uid = getIntent().getExtras().getString("Uid").trim();
@@ -50,6 +51,11 @@ public class ItemEdit extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.ListofItems));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mEditItemType.setAdapter(myAdapter);
+
+        ArrayAdapter<String> repairAdapter = new ArrayAdapter<>(ItemEdit.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.RepairStatusList));
+        repairAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mEditRepairStatus.setAdapter(repairAdapter);
 
         //Pull current doc
         DocumentReference docRef = db.collection("Items").document(Uid);
@@ -88,6 +94,7 @@ public class ItemEdit extends AppCompatActivity {
             String itemType = mEditItemType.getSelectedItem().toString();
             String email = mEditOwnerEmail.getText().toString().trim();
             String extraInfo = mEditExtraInfo.getText().toString().trim();
+            String repairStatus = mEditRepairStatus.getSelectedItem().toString();
             if (TextUtils.isEmpty(email)) {
                 mEditOwnerEmail.setError("Email is Required.");
                 return;
@@ -103,6 +110,7 @@ public class ItemEdit extends AppCompatActivity {
             item.put("ItemType", itemType);
             item.put("OwnerEmail", email);
             item.put("ExtraInfo", extraInfo);
+            item.put("RepairStatus", repairStatus);
             // Edit Document
             db.collection("Items").document(Uid)
                     .set(item)
