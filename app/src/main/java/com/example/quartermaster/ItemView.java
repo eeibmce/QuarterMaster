@@ -38,13 +38,13 @@ public class ItemView extends AppCompatActivity {
                 DocumentSnapshot document = task.getResult();
                 if (document.exists()) {
                     mItemInfo.setText("");
-                    mItemInfo.append(document.getId());
+                    mItemInfo.append("ItemId: " + document.getId());
                     mItemInfo.append("\n");
-                    mItemInfo.append(document.getString("ItemType"));
+                    mItemInfo.append("ItemType: " + document.getString("ItemType"));
                     mItemInfo.append("\n");
-                    mItemInfo.append(document.getString("OwnerEmail"));
+                    mItemInfo.append("OwnerEmail: " + document.getString("OwnerEmail"));
                     mItemInfo.append("\n");
-                    mItemInfo.append(document.getString("ExtraInfo"));
+                    mItemInfo.append("ExtraInfo: " + document.getString("ExtraInfo"));
                     mItemInfo.append("\n");
                 }
             } else {
@@ -60,6 +60,7 @@ public class ItemView extends AppCompatActivity {
             Intent i = new Intent(getApplicationContext(), QrActivity.class);
             i.putExtra("Uid", Uid);
             startActivity(i);
+            finish();
         });
     }
 }
