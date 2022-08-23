@@ -52,20 +52,6 @@ public class QrActivity extends AppCompatActivity {
                         "Item Ids to encode can be found on the devices page");
                 return;
             }
-//            MultiFormatWriter writer = new MultiFormatWriter();
-
-//            try {
-//                BitMatrix matrix = writer.encode(sText, BarcodeFormat.QR_CODE, 350, 350);
-//                BarcodeEncoder encoder = new BarcodeEncoder();
-//                Bitmap bitmap = encoder.createBitmap(matrix);
-//                ivOutput.setImageBitmap(bitmap);
-//                InputMethodManager manager = (InputMethodManager) getSystemService(
-//                        Context.INPUT_METHOD_SERVICE
-//                );
-//                manager.hideSoftInputFromWindow(etInput.getApplicationWindowToken(), 0);
-//            } catch (WriterException e) {
-//                e.printStackTrace();
-//            }
             try {
                 BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
                 Bitmap bitmap = barcodeEncoder.encodeBitmap(sText, BarcodeFormat.QR_CODE, 400, 400);
@@ -81,39 +67,6 @@ public class QrActivity extends AppCompatActivity {
             options.setBeepEnabled(true);
             barcodeLauncher.launch(options);
         });
-        // Start scan
-//        btScan.setOnClickListener(view -> {
-//
-//            IntentIntegrator intentIntegrator = new IntentIntegrator(
-//
-//                    QrActivity.this
-//            );
-//            intentIntegrator.setPrompt("For Flash Use Volume Up Key");
-//            intentIntegrator.setBeepEnabled(true);
-//            intentIntegrator.setOrientationLocked(true);
-//            intentIntegrator.setCaptureActivity(Capture.class);
-//            intentIntegrator.initiateScan();
-//        });
-//    }
-
-//        // Get scan result
-//        @Override
-//        protected void onActivityResult ( int requestCode,
-//        int resultCode,
-//        @Nullable Intent data){
-//            super.onActivityResult(requestCode, resultCode, data);
-//            IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-//            if (intentResult.getContents() != null) {
-//                String Uid = intentResult.getContents();
-//                Intent i = new Intent(getApplicationContext(), ItemView.class);
-//                i.putExtra("Uid", Uid);
-//                startActivity(i);
-//            } else {
-//                Toast.makeText(getApplicationContext(),
-//                        "OOPS... You did not scan anything",
-//                        Toast.LENGTH_SHORT).show();
-//            }
-//        }
     }
 }
 
