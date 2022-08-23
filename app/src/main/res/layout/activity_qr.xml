@@ -14,20 +14,50 @@
         android:id="@+id/et_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="224dp"
         android:autofillHints=""
         android:background="@android:drawable/editbox_background"
         android:hint="@string/enter_item_id"
         android:inputType="text"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/quartermaster_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/newlogosimplewhite" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ericsson"
+        android:text="QuarterMaster"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083" />
 
     <Button
         android:id="@+id/bt_generate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="116dp"
         android:backgroundTint="#0082F0"
         android:text="@string/generate"
         app:layout_constraintEnd_toEndOf="parent"
