@@ -19,13 +19,13 @@
         app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.251" />
+        app:layout_constraintVertical_bias="0.276" />
 
     <TextView
         android:id="@+id/UID"
 
-        android:layout_width="300dp"
-        android:layout_height="420dp"
+        android:layout_width="299dp"
+        android:layout_height="412dp"
         android:isScrollContainer="true"
         android:minWidth="48dp"
         android:minHeight="48dp"
@@ -39,10 +39,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.758" />
+        app:layout_constraintVertical_bias="0.771" />
 
     <EditText
         android:id="@+id/ItemIdSearch"
@@ -60,10 +60,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.156" />
+        app:layout_constraintVertical_bias="0.174" />
 
     <Button
         android:id="@+id/searchBtn"
@@ -77,19 +77,19 @@
         app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintVertical_bias="0.164" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
         android:contentDescription="@string/quartermaster_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
+        app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
     <Spinner
@@ -106,7 +106,7 @@
         app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.254" />
+        app:layout_constraintVertical_bias="0.275" />
 
     <Button
         android:id="@+id/ItemCreate"
@@ -133,10 +133,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintHorizontal_bias="0.68"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.064" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
