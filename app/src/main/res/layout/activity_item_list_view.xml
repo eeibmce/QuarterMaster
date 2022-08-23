@@ -4,94 +4,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@drawable/bg_gradient"
     tools:context=".ItemListView">
 
     <Button
         android:id="@+id/filterBtn"
         android:layout_width="99dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="556dp"
         android:backgroundTint="#0082F0"
         android:text="@string/filter"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/FilterItems" />
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toEndOf="@+id/SearchBar"
+        app:layout_constraintTop_toBottomOf="@+id/searchBtn"
+        app:layout_constraintVertical_bias="0.036" />
 
     <TextView
         android:id="@+id/UID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_width="297dp"
+        android:layout_height="420dp"
+        android:isScrollContainer="true"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:overScrollMode="always"
+        android:scrollbars="vertical"
         android:selectAllOnFocus="true"
         android:text="@string/id_list"
         android:textColor="#FFFFFF"
         android:textIsSelectable="true"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FilterItems"
-        app:layout_constraintVertical_bias="0.085"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/SearchBar"
+        app:layout_constraintVertical_bias="0.134" />
 
     <EditText
-
         android:id="@+id/ItemIdSearch"
-        android:layout_width="130dp"
-        android:layout_height="48dp"
-        android:autofillHints=""
+        android:layout_width="164dp"
+        android:layout_height="53dp"
+        android:autofillHints="firstname.lastname@ericsson.com"
+        android:background="#2D2D2D"
         android:ems="10"
         android:hint="@string/enter_item_id"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.156" />
 
     <Button
         android:id="@+id/searchBtn"
         android:layout_width="99dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="648dp"
         android:backgroundTint="#0082F0"
         android:text="@string/search"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/logo"
-        app:layout_constraintStart_toEndOf="@+id/ItemIdSearch" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toEndOf="@+id/ItemIdSearch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:contentDescription="@string/quartermaster_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026"
+        app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
     <Spinner
-        android:id="@+id/FilterItems"
-        android:layout_width="217dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="120dp"
+        android:id="@+id/SearchBar"
+        android:layout_width="163dp"
+        android:layout_height="48dp"
         android:background="#B52323"
         android:backgroundTint="#C0C0C0  "
         android:contentDescription="@string/select_item_type"
         android:foregroundTint="#C8C1C1"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <Button
+        android:id="@+id/ItemCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0082F0"
+        android:text="@string/create_item"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ericsson"
+        android:text="@string/app_name"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

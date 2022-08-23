@@ -49,5 +49,10 @@
     <string name="specific_item_info">Specific Item Info</string>
     <string name="generate">Generate</string>
     <string name="scan">Scan</string>
+    <string name="quantity">Quantity</string>
     <string name="filter">Filter</string>
+    <string name="extra_info">Extra Info</string>
+    <string name="edit_item">Edit Item</string>
+    <string name="itemid">ItemID</string>
+    <string name="qrgeneration">QrGeneration</string>
 </resources>

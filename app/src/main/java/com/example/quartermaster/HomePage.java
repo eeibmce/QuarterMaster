@@ -17,8 +17,8 @@ public class HomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        View mitemsBtn = findViewById(R.id.toItems);
-        View mprofileBtn = findViewById(R.id.toProfile);
+        View mItemsBtn = findViewById(R.id.toItems);
+        View mProfileBtn = findViewById(R.id.toProfile);
         View qrOptions = findViewById(R.id.toQr);
 
         //Check if user is logged in
@@ -42,21 +42,23 @@ public class HomePage extends AppCompatActivity {
         }
 
 
-        mitemsBtn.setOnClickListener(v -> {
+        mItemsBtn.setOnClickListener(v -> {
 
-            startActivity(new Intent(getApplicationContext(), ItemCreate.class));
+            startActivity(new Intent(getApplicationContext(), ItemListView.class));
 
         });
 
-        mprofileBtn.setOnClickListener(v -> {
+        mProfileBtn.setOnClickListener(v -> {
 
             startActivity(new Intent(getApplicationContext(), Profile.class));
 
         });
         qrOptions.setOnClickListener(v -> {
-
-            startActivity(new Intent(getApplicationContext(), QrActivity.class));
-
+            String Uid = "";
+            Intent i = new Intent(getApplicationContext(), QrActivity.class);
+            i.putExtra("Uid", Uid);
+            startActivity(i);
+            finish();
         });
 
 
