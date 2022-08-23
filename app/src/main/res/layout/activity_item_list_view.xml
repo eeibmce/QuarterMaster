@@ -13,19 +13,19 @@
         android:layout_height="51dp"
         android:backgroundTint="#0082F0"
         android:text="@string/filter"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.948"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.276" />
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toEndOf="@+id/SearchBar"
+        app:layout_constraintTop_toBottomOf="@+id/searchBtn"
+        app:layout_constraintVertical_bias="0.036" />
 
     <TextView
         android:id="@+id/UID"
 
-        android:layout_width="299dp"
-        android:layout_height="412dp"
+        android:layout_width="297dp"
+        android:layout_height="420dp"
         android:isScrollContainer="true"
         android:minWidth="48dp"
         android:minHeight="48dp"
@@ -34,15 +34,15 @@
         android:selectAllOnFocus="true"
         android:text="@string/id_list"
         android:textColor="#FFFFFF"
-        android:textIsSelectable="false"
-        android:textSize="15sp"
+        android:textIsSelectable="true"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.771" />
+        app:layout_constraintTop_toBottomOf="@+id/SearchBar"
+        app:layout_constraintVertical_bias="0.134" />
 
     <EditText
         android:id="@+id/ItemIdSearch"
@@ -60,10 +60,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.174" />
+        app:layout_constraintVertical_bias="0.156" />
 
     <Button
         android:id="@+id/searchBtn"
@@ -71,25 +71,25 @@
         android:layout_height="51dp"
         android:backgroundTint="#0082F0"
         android:text="@string/search"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.948"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toEndOf="@+id/ItemIdSearch"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.155" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:contentDescription="@string/quartermaster_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
+        app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
     <Spinner
@@ -103,18 +103,17 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch"
+        app:layout_constraintVertical_bias="0.03" />
 
     <Button
         android:id="@+id/ItemCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#0082F0"
-        android:text="@string/create_item"
-        android:textColor="#000000"
+        android:text="Create Item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.942"
@@ -127,16 +126,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ericsson"
-        android:text="@string/app_name"
+        android:text="QuarterMaster"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064" />
+        app:layout_constraintVertical_bias="0.052" />
 
+    <!--        <EditText-->
+<!--            android:id="@+id/SearchBar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="28dp"-->
+<!--            android:autofillHints="firstname.lastname@ericsson.com"-->
+<!--            android:background="#2D2D2D"-->
+<!--            android:ems="10"-->
+<!--            android:hint="@string/search"-->
+<!--            android:inputType="text"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textColorHint="@color/white"-->
+<!--            android:textSize="14sp"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/filterBtn"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
