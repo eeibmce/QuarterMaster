@@ -56,4 +56,5 @@
     <string name="itemid">ItemID</string>
     <string name="qrgeneration">QrGeneration</string>
     <string name="save_as_pdf">Save as Pdf</string>
+    <string name="save_as_jpeg">Save as Jpeg</string>
 </resources>
