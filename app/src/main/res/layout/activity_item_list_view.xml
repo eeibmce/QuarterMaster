@@ -23,6 +23,7 @@
 
     <TextView
         android:id="@+id/UID"
+
         android:layout_width="297dp"
         android:layout_height="420dp"
         android:isScrollContainer="true"
@@ -33,7 +34,7 @@
         android:selectAllOnFocus="true"
         android:text="@string/id_list"
         android:textColor="#FFFFFF"
-        android:textIsSelectable="true"
+        android:textIsSelectable="false"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -112,8 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#0082F0"
-        android:text="@string/create_item"
-        android:textColor="#000000"
+        android:text="Create Item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.942"
@@ -126,7 +126,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ericsson"
-        android:text="@string/app_name"
+        android:text="QuarterMaster"
         android:textColor="#FFFFFF"
         android:textSize="26sp"
         android:textStyle="bold"
@@ -137,5 +137,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.052" />
 
+    <!--        <EditText-->
+<!--            android:id="@+id/SearchBar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="28dp"-->
+<!--            android:autofillHints="firstname.lastname@ericsson.com"-->
+<!--            android:background="#2D2D2D"-->
+<!--            android:ems="10"-->
+<!--            android:hint="@string/search"-->
+<!--            android:inputType="text"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textColorHint="@color/white"-->
+<!--            android:textSize="14sp"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/filterBtn"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/ItemIdSearch" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
