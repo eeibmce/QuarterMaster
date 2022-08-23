@@ -31,7 +31,7 @@ public class QrActivity extends AppCompatActivity {
         }
     });
     EditText etInput;
-    Button btGenerate, btScan;
+    Button btGenerate, btScan, btSave;
     ImageView ivOutput;
 
     @Override
@@ -42,6 +42,8 @@ public class QrActivity extends AppCompatActivity {
         btGenerate = findViewById(R.id.bt_generate);
         ivOutput = findViewById(R.id.iv_output);
         btScan = findViewById(R.id.bt_scan);
+        btSave = findViewById(R.id.bt_save);
+        //btSave.setVisibility(view.INVISIBLE);
         String Uid = getIntent().getExtras().getString("Uid").trim();
         etInput.setText(Uid);
         //Generate code
@@ -60,12 +62,18 @@ public class QrActivity extends AppCompatActivity {
             } catch (Exception e) {
                 Toast.makeText(QrActivity.this, "Generation failed", Toast.LENGTH_LONG).show();
             }
+            //btSave.setVisibility(view.VISIBLE);
         });
         // Launch
         btScan.setOnClickListener(view -> {
             ScanOptions options = new ScanOptions();
             options.setBeepEnabled(true);
             barcodeLauncher.launch(options);
+        });
+
+        btSave.setOnClickListener( view -> {
+
+
         });
     }
 }
