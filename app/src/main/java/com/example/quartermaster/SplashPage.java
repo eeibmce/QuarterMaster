@@ -1,4 +1,5 @@
 package com.example.quartermaster;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,6 +8,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashPage extends AppCompatActivity {
@@ -16,6 +18,7 @@ public class SplashPage extends AppCompatActivity {
 //    ImageView imageView3;
 //    TextView textView, textView2;
     private static final int SPLASH_SCREEN_TIMEOUT = 2000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,15 +44,10 @@ public class SplashPage extends AppCompatActivity {
         fadeOut.setDuration(1800);
         ImageView image = findViewById(R.id.imageView8);
         image.setAnimation(fadeOut);
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                Intent intent = new Intent(SplashPage.this, HomePage.class);
-                startActivity(intent);
-                finish();
-            }
-
+        new Handler().postDelayed(() -> {
+            Intent intent = new Intent(SplashPage.this, HomePage.class);
+            startActivity(intent);
+            finish();
         }, SPLASH_SCREEN_TIMEOUT);
     }
 }

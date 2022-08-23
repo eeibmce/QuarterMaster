@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Profile extends AppCompatActivity {
 
-    Button mProfileLogOutBtn, mDevicesBtn;
+    Button mProfileLogOutBtn;
     TextView mUserEmail;
     FirebaseAuth fAuth;
 
@@ -22,7 +22,6 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         mProfileLogOutBtn = findViewById(R.id.ProfileLogoutBtn);
-        mDevicesBtn = findViewById(R.id.Devices);
         mUserEmail = findViewById(R.id.Email);
         fAuth = FirebaseAuth.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -38,11 +37,7 @@ public class Profile extends AppCompatActivity {
             Intent i = new Intent(getApplicationContext(), Login.class);
             startActivity(i);
         });
-        mDevicesBtn.setOnClickListener(view -> {
-            finish();
-            Intent i = new Intent(getApplicationContext(), ItemListView.class);
-            startActivity(i);
-        });
+
 
     }
 

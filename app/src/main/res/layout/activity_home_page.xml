@@ -28,12 +28,12 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="104dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/quartermaster_logo"
         android:src="@drawable/logo200x"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appName" />
 
@@ -55,7 +55,7 @@
             android:paddingLeft="16dp"
             android:paddingTop="24dp"
             android:paddingRight="16dp"
-            android:paddingBottom="24dp">
+            android:paddingBottom="8dp">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -77,10 +77,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="25dp"
-                        android:contentDescription="@string/qrscanner"
-                        android:src="@drawable/whiteqr" />
+                        android:contentDescription="@string/qractions"
+                        android:gravity="center"
+                        android:maxWidth="64dp"
+                        android:maxHeight="64dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/qrcode" />
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="146dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ericsson"
+                    android:gravity="center"
+                    android:text="@string/qractions"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -103,10 +116,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="25dp"
                         android:contentDescription="@string/profile"
-                        android:src="@drawable/profile_64x64" />
+                        android:gravity="center"
+                        android:maxWidth="64dp"
+                        android:maxHeight="64dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/account" />
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ericsson"
+                    android:gravity="center"
+                    android:text="@string/profile"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -126,19 +152,25 @@
                     android:background="@drawable/bg_blue"
                     android:orientation="vertical">
 
-
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="25dp"
                         android:contentDescription="@string/create_item"
-                        android:src="@drawable/laptopx64white" />
-
-
+                        android:maxWidth="64dp"
+                        android:maxHeight="64dp"
+                        android:src="@drawable/phonelaptop" />
                 </LinearLayout>
 
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ericsson"
+                    android:gravity="center"
+                    android:text="@string/devices"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
 
