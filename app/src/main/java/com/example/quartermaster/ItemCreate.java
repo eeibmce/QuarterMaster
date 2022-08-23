@@ -54,7 +54,7 @@ public class ItemCreate extends AppCompatActivity {
             }
             // Extra info
             String extraInfo = mExtraInfo.getText().toString().trim();
-
+            String repairStatus = "Working";
             // Get email
             assert user != null;
             String email = user.getEmail();
@@ -63,6 +63,7 @@ public class ItemCreate extends AppCompatActivity {
             item.put("ItemType", itemType);
             item.put("OwnerEmail", email);
             item.put("ExtraInfo", extraInfo);
+            item.put("RepairStatus", repairStatus);
             String stquantity = mQuantity.getText().toString();
             int quantity = Integer.parseInt(stquantity);
             if (quantity > 100) {
