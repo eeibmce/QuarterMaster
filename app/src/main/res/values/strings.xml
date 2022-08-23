@@ -25,6 +25,11 @@
         <item>Computer</item>
         <item>Server</item>
     </string-array>
+    <string-array name="RepairStatusList">
+        <item>Working</item>
+        <item>Broken</item>
+        <item>Being Repaired</item>
+    </string-array>
     <string name="title_activity_home_pageqm">HomePageqm</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
@@ -57,4 +62,5 @@
     <string name="qrgeneration">Qr-Generation</string>
     <string name="save_as_jpeg">Save as Jpeg</string>
     <string name="qractions">QrActions</string>
+    <string name="repair_status">Repair Status</string>
 </resources>
