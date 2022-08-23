@@ -54,9 +54,11 @@ public class HomePage extends AppCompatActivity {
 
         });
         qrOptions.setOnClickListener(v -> {
-
-            startActivity(new Intent(getApplicationContext(), QrActivity.class));
-
+            String Uid = "";
+            Intent i = new Intent(getApplicationContext(), QrActivity.class);
+            i.putExtra("Uid", Uid);
+            startActivity(i);
+            finish();
         });
 
 

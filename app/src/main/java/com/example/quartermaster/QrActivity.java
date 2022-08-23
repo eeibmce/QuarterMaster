@@ -18,6 +18,18 @@ import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
 
 public class QrActivity extends AppCompatActivity {
+    // Register the launcher and result handler
+    public ActivityResultLauncher<ScanOptions> barcodeLauncher = registerForActivityResult(new ScanContract(), result -> {
+        if (result.getContents() == null) {
+            Toast.makeText(QrActivity.this, "Scan Failed", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(QrActivity.this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
+            String Uid = result.getContents();
+            Intent i = new Intent(getApplicationContext(), ItemView.class);
+            i.putExtra("Uid", Uid);
+            startActivity(i);
+        }
+    });
     EditText etInput;
     Button btGenerate, btScan;
     ImageView ivOutput;
@@ -36,7 +48,8 @@ public class QrActivity extends AppCompatActivity {
         btGenerate.setOnClickListener(view -> {
             String sText = etInput.getText().toString().trim();
             if (TextUtils.isEmpty(sText)) {
-                etInput.setError("Must provide text to be encoded");
+                etInput.setError("Must provide text to be encoded," +
+                        "Item Ids to encode can be found on the devices page");
                 return;
             }
 //            MultiFormatWriter writer = new MultiFormatWriter();
@@ -102,18 +115,5 @@ public class QrActivity extends AppCompatActivity {
 //            }
 //        }
     }
-
-    // Register the launcher and result handler
-    public ActivityResultLauncher<ScanOptions> barcodeLauncher = registerForActivityResult(new ScanContract(), result -> {
-                if (result.getContents() == null) {
-                    Toast.makeText(QrActivity.this, "Scan Failed", Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(QrActivity.this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
-                    String Uid = result.getContents();
-                    Intent i = new Intent(getApplicationContext(), ItemView.class);
-                    i.putExtra("Uid", Uid);
-                    startActivity(i);
-                }
-            });
 }
 

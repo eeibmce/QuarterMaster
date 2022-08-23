@@ -1,7 +1,6 @@
 package com.example.quartermaster;
 
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -42,7 +41,7 @@ public class ItemListView extends AppCompatActivity {
         mFilterBtn = findViewById(R.id.filterBtn);
         mItemCreate = findViewById(R.id.ItemCreate);
         mUID.setMovementMethod(new ScrollingMovementMethod());
-        mUID. setTextIsSelectable(true);
+        mUID.setTextIsSelectable(true);
 
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(ItemListView.this,

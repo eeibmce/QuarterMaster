@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Profile extends AppCompatActivity {
 
-    Button mProfileLogOutBtn, mDevicesBtn;
+    Button mProfileLogOutBtn;
     TextView mUserEmail;
     FirebaseAuth fAuth;
 
