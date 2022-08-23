@@ -1,18 +1,15 @@
 package com.example.quartermaster;
 
 
-import android.content.ClipboardManager;
-import android.content.Context;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -99,13 +96,5 @@ public class ItemListView extends AppCompatActivity {
             startActivity(i);
         });
 
-        mUID.setOnClickListener(new View.OnClickListener() { // set onclick listener to my textview
-            @Override
-            public void onClick(View view) {
-                ClipboardManager cm = (ClipboardManager)getApplicationContext().getSystemService(Context.CLIPBOARD_SERVICE);
-                cm.setText(mUID.getText().toString());
-                Toast.makeText(getApplicationContext(), "Copied :)", Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 }
