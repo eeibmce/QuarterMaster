@@ -7,17 +7,19 @@
     android:background="@drawable/bg_gradient"
     tools:context=".ItemCreate">
 
-    <ImageView
+    <TextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/app_name"
+        android:fontFamily="@font/ericsson"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="27sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:srcCompat="@drawable/quartermaster" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <ImageView
         android:id="@+id/logo"
