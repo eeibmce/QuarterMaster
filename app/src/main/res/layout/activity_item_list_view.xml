@@ -34,7 +34,7 @@
         android:selectAllOnFocus="true"
         android:text="@string/id_list"
         android:textColor="#FFFFFF"
-        android:textIsSelectable="true"
+        android:textIsSelectable="false"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
