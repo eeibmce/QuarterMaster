@@ -8,6 +8,17 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".QrActivity">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/quartermaster_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:srcCompat="@drawable/newlogosimplewhite" />
 
 
     <EditText
@@ -23,18 +34,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:contentDescription="@string/quartermaster_logo"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:srcCompat="@drawable/newlogosimplewhite" />
 
     <TextView
         android:id="@+id/textView"
@@ -55,27 +54,29 @@
         android:id="@+id/bt_generate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:backgroundTint="#0082F0"
         android:text="@string/generate"
-        android:textColor="#000000"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/iv_output"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_input" />
+        app:layout_constraintTop_toBottomOf="@+id/et_input"
+        app:layout_constraintVertical_bias="0.100000024" />
 
     <Button
         android:id="@+id/bt_scan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:backgroundTint="#0082F0"
         android:text="@string/scan"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".975" />
 
     <Button
         android:id="@+id/bt_save"
@@ -84,21 +85,25 @@
         android:layout_marginBottom="8dp"
         android:backgroundTint="#0082F0"
         android:text="@string/save_as_jpeg"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/bt_scan"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_output"
+        app:layout_constraintVertical_bias="0.9" />
 
     <ImageView
         android:id="@+id/iv_output"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:contentDescription="@string/qrscanner"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/bt_save"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_generate" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

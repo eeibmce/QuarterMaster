@@ -38,7 +38,7 @@ public class ItemCreate extends AppCompatActivity {
         mItemType = findViewById(R.id.ItemType);
         mQuantity = findViewById(R.id.Quantity);
         mExtraInfo = findViewById(R.id.ExtraInfo);
-
+        mQuantity.setText("1");
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(ItemCreate.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.ListofItems));
@@ -68,6 +68,9 @@ public class ItemCreate extends AppCompatActivity {
             int quantity = Integer.parseInt(stquantity);
             if (quantity > 100) {
                 mQuantity.setError("Only 100 or less items may be added at a time");
+            }
+            if (quantity <1){
+                mQuantity.setError("At least 1 item must be added");
             }
             for (int n = quantity; n > 0; n--) {
                 // Add a new document with a generated ID

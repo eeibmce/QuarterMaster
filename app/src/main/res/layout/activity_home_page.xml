@@ -204,9 +204,10 @@
         android:layout_width="match_parent"
         android:layout_height="8dp"
         android:background="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/appName"
-        tools:layout_editor_absoluteX="57dp"
-        android:orientation="horizontal" />
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout><!--QR options text for button-->

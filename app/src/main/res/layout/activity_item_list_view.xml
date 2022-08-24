@@ -41,7 +41,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/ItemCreate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SearchBar" />
 
@@ -50,7 +50,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:autofillHints="firstname.lastname@ericsson.com"
         android:background="#2D2D2D"
@@ -110,7 +110,7 @@
         android:id="@+id/ItemCreate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#0082F0"
         android:text="@string/create_item"
         app:layout_constraintBottom_toBottomOf="parent"
