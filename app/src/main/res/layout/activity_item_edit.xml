@@ -27,12 +27,13 @@
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:contentDescription="@string/quartermaster_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
     <Spinner
@@ -141,9 +142,11 @@
         android:backgroundTint="#0082F0"
         android:text="@string/edit_item"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditRepairStatus" />
+        app:layout_constraintTop_toBottomOf="@+id/EditRepairStatus"
+        app:layout_constraintVertical_bias="0.20" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
