@@ -63,4 +63,5 @@
     <string name="save_as_jpeg">Save as Jpeg</string>
     <string name="qractions">QrActions</string>
     <string name="repair_status">Repair Status</string>
+    <string name="delete_item">Delete Item</string>
 </resources>

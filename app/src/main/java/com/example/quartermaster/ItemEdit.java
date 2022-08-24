@@ -26,7 +26,7 @@ public class ItemEdit extends AppCompatActivity {
     TextView mItemId;
     Spinner mEditItemType, mEditRepairStatus;
     EditText mEditOwnerEmail, mEditExtraInfo;
-    Button mEditBtn;
+    Button mEditBtn, mDeleteBtn;
     FirebaseAuth fAuth;
 
     @Override
@@ -44,6 +44,7 @@ public class ItemEdit extends AppCompatActivity {
         mEditExtraInfo = findViewById(R.id.EditExtraInfo);
         mEditRepairStatus = findViewById(R.id.EditRepairStatus);
         mEditBtn = findViewById(R.id.EditItemBtn);
+        mDeleteBtn = findViewById(R.id.DeleteItemBtn);
 
         String Uid = getIntent().getExtras().getString("Uid").trim();
 
@@ -121,6 +122,10 @@ public class ItemEdit extends AppCompatActivity {
                     })
                     .addOnFailureListener(e -> Toast.makeText(ItemEdit.this, "Item could not be added", Toast.LENGTH_SHORT).show());
         });
+        mEditBtn.setOnClickListener(v -> db.collection("Items").document("Uid")
+                .delete()
+                .addOnSuccessListener(aVoid -> Toast.makeText(ItemEdit.this, "Item successfully Deleted", Toast.LENGTH_SHORT).show())
+                .addOnFailureListener(e -> Toast.makeText(ItemEdit.this, "Error Deleting Item", Toast.LENGTH_SHORT).show()));
 
 
     }
