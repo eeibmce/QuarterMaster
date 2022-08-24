@@ -60,14 +60,16 @@ public class QrActivity extends AppCompatActivity {
         String Uid = getIntent().getExtras().getString("Uid").trim();
         ActivityCompat.requestPermissions(this, new String[]{WRITE_EXTERNAL_STORAGE}, PackageManager.PERMISSION_GRANTED);
         etInput.setText(Uid);
-        //Generate code
+        //Generate qrcode
         btGenerate.setOnClickListener(view -> {
+            // get text to be encoded
             String sText = etInput.getText().toString().trim();
             if (TextUtils.isEmpty(sText)) {
                 etInput.setError("Must provide text to be encoded," +
                         "Item Ids to encode can be found on the devices page");
                 return;
             }
+            // try create qr code
             try {
                 BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
                 Bitmap bitmap = barcodeEncoder.encodeBitmap(sText, BarcodeFormat.QR_CODE, 400, 400);
@@ -76,34 +78,37 @@ public class QrActivity extends AppCompatActivity {
             } catch (Exception e) {
                 Toast.makeText(QrActivity.this, "Generation failed", Toast.LENGTH_LONG).show();
             }
+            // enable saving qr code
             btSave.setVisibility(View.VISIBLE);
         });
-        // Launch
+        // Launch qr scanner
         btScan.setOnClickListener(view -> {
             ScanOptions options = new ScanOptions();
             options.setBeepEnabled(true);
             barcodeLauncher.launch(options);
         });
-
+        // saving qr to jpeg
         btSave.setOnClickListener(view -> {
             File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
             String sText = etInput.getText().toString().trim();
-            String fname = "Qr" + sText + ".jpg";
+            String fname = "Qr-" + sText + ".jpg";
             File file = new File(path, fname);
             path.mkdirs();
+            // turn ivOutput to bitmap
             Bitmap bmap = Bitmap.createBitmap(ivOutput.getWidth(), ivOutput.getHeight(), Bitmap.Config.RGB_565);
             Canvas canvas = new Canvas(bmap);
             ivOutput.draw(canvas);
+            // delete qr file if it already exists
             if (file.exists())
                 file.delete();
             try {
+                // create and save jpeg
                 FileOutputStream out = new FileOutputStream(file);
                 bmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
                 out.flush();
                 out.close();
                 Toast.makeText(this, "QrCode Saved to Pictures", Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
-                e.printStackTrace();
                 Toast.makeText(this, "Save Failed", Toast.LENGTH_SHORT).show();
             }
         });

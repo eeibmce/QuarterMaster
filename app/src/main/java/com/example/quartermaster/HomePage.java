@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+// Main Page of project
 public class HomePage extends AppCompatActivity {
 
 
@@ -41,18 +42,19 @@ public class HomePage extends AppCompatActivity {
             startActivity(i);
         }
 
-
+        // to itemlist view
         mItemsBtn.setOnClickListener(v -> {
 
             startActivity(new Intent(getApplicationContext(), ItemListView.class));
 
         });
-
+        // to profile
         mProfileBtn.setOnClickListener(v -> {
 
             startActivity(new Intent(getApplicationContext(), Profile.class));
 
         });
+        // to qr activity
         qrOptions.setOnClickListener(v -> {
             String Uid = "";
             Intent i = new Intent(getApplicationContext(), QrActivity.class);

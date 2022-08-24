@@ -38,7 +38,7 @@ public class Login extends AppCompatActivity {
 
             String email = mEmail.getText().toString().trim();
             String password = mPassword.getText().toString().trim();
-
+            // ensure email and password are valid
             if (TextUtils.isEmpty(email)) {
                 mEmail.setError("Email is Required.");
                 return;

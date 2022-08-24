@@ -7,11 +7,24 @@
     android:background="@drawable/bg_gradient"
     tools:context=".ItemCreate">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/quartermaster_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/newlogosimplewhite" />
+
     <TextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/app_name"
         android:fontFamily="@font/ericsson"
         android:text="@string/app_name"
@@ -19,27 +32,37 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="112dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="52dp"
-        android:contentDescription="@string/quartermaster_logo"
+    <TextView
+        android:id="@+id/ItemID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="#2D2D2D"
+        android:ems="10"
+        android:hint="@string/itemid"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/newlogosimplewhite" />
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
 
     <Spinner
         android:id="@+id/EditItemType"
-        android:layout_width="340dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:background="#B52323"
         android:backgroundTint="#C0C0C0  "
         android:contentDescription="@string/select_item_type"
@@ -50,29 +73,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ItemID" />
 
-    <TextView
-        android:id="@+id/ItemID"
-        android:layout_width="340dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:background="#2D2D2D"
-        android:ems="10"
-        android:hint="@string/itemid"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appName" />
-
     <EditText
         android:id="@+id/EditOwnerEmail"
-        android:layout_width="340dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:autofillHints="Owner Email"
         android:background="#2D2D2D"
         android:ems="10"
@@ -90,9 +97,11 @@
 
     <EditText
         android:id="@+id/EditExtraInfo"
-        android:layout_width="340dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:autofillHints="Extra Info"
         android:background="#2D2D2D"
         android:ems="10"
@@ -110,9 +119,11 @@
 
     <Spinner
         android:id="@+id/EditRepairStatus"
-        android:layout_width="340dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:background="#B52323"
         android:backgroundTint="#C0C0C0  "
         android:contentDescription="@string/repair_status"
@@ -127,13 +138,28 @@
         android:id="@+id/EditItemBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:backgroundTint="#0082F0"
         android:text="@string/edit_item"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EditRepairStatus" />
+        app:layout_constraintTop_toBottomOf="@+id/EditRepairStatus"
+        app:layout_constraintVertical_bias="0.20" />
+
+    <Button
+        android:id="@+id/DeleteItemBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0082F0"
+        android:text="@string/delete_item"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditItemBtn"
+        app:layout_constraintVertical_bias="0.20" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

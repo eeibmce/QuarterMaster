@@ -7,61 +7,23 @@
     android:background="@drawable/bg_gradient"
     tools:context=".Register">
 
-    <EditText
-        android:id="@+id/Email"
-        android:layout_width="0dp"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:autofillHints="firstname.lastname@ericsson.com"
-        android:background="#2D2D2D"
-        android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="14sp"
+        android:contentDescription="@string/quartermaster_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FullName"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:autofillHints="Password"
-        android:background="#2D2D2D"
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/newlogosimplewhite" />
 
     <TextView
         android:id="@+id/appName"
-        android:layout_width="293dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="144dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/ericsson"
         android:text="@string/app_name"
         android:textColor="#FFFFFF"
@@ -69,13 +31,13 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <TextView
-        android:id="@+id/loginTitle"
+        android:id="@+id/registerTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/ericsson"
         android:text="@string/create_new_account"
         android:textColor="#FFFFFF"
@@ -91,8 +53,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:autofillHints="Firstname Lastname"
         android:background="#2D2D2D"
         android:ems="10"
@@ -103,50 +65,85 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginTitle"
-        app:layout_constraintVertical_bias="0.110000014" />
+        app:layout_constraintTop_toBottomOf="@+id/registerTitle" />
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="firstname.lastname@ericsson.com"
+        android:background="#2D2D2D"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FullName" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="Password"
+        android:background="#2D2D2D"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
 
     <Button
         android:id="@+id/RegisterBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="#0082F0"
         android:text="@string/register_button"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        app:layout_constraintTop_toBottomOf="@+id/Password"
+        app:layout_constraintVertical_bias=".2" />
 
     <TextView
         android:id="@+id/toLogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:background="@color/zxing_transparent"
         android:text="@string/already_have_an_account_login_here"
         android:textColor="#ffff"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/RegisterBtn"
+        app:layout_constraintVertical_bias=".2" />
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="112dp"
-        android:layout_height="112dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/quartermaster_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/newlogosimplewhite" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

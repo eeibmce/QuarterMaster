@@ -25,12 +25,12 @@ public class Profile extends AppCompatActivity {
         mUserEmail = findViewById(R.id.Email);
         fAuth = FirebaseAuth.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
+        // setting email to email of current user
         assert user != null;
         String email = "Email: " + user.getEmail();
 
         mUserEmail.setText(email);
-
+        // log out script
         mProfileLogOutBtn.setOnClickListener(view -> {
             FirebaseAuth.getInstance().signOut();
             finish();

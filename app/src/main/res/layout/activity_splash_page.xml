@@ -4,27 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/bg_gradient"
     tools:context=".SplashPage">
-
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="199dp"
-        android:layout_height="196dp"
-        android:contentDescription="@string/quartermaster_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.31"
-        app:srcCompat="@drawable/newlogosimplewhite" />
 
     <TextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:contentDescription="@string/app_name"
         android:fontFamily="@font/ericsson"
         android:text="@string/app_name"
@@ -33,19 +19,46 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
-        app:layout_constraintVertical_bias="0.246" />
+        app:layout_constraintTop_toBottomOf="@+id/animation"
+        app:layout_constraintVertical_bias=".2" />
 
     <LinearLayout
+        android:id="@+id/underLine"
         android:layout_width="match_parent"
-        android:layout_height="9dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginEnd="55dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appName"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="493dp" />
+        app:layout_constraintVertical_bias="0.0">
 
+        <!--        <com.airbnb.lottie.LottieAnimationView-->
+        <!--            android:id="@+id/animation"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:lottie_autoPlay="true"-->
+        <!--            app:lottie_loop="true"-->
+        <!--            app:lottie_rawRes="@raw/animated">-->
+        <!--        </com.airbnb.lottie.LottieAnimationView>-->
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animated" />
 </androidx.constraintlayout.widget.ConstraintLayout>

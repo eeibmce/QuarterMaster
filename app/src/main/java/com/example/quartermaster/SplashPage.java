@@ -3,51 +3,32 @@ package com.example.quartermaster;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.WindowManager;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.widget.ImageView;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashPage extends AppCompatActivity {
-
-    //    Variables
-//    Animation topAnim, bottomAnim;
-//    ImageView imageView3;
-//    TextView textView, textView2;
-    private static final int SPLASH_SCREEN_TIMEOUT = 2000;
+    private static final int Splash_timeout = 5000;
+    TextView anim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_page);
-//        //Animations
-//        topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
-//        bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
-//
-//        //Hooks
-//        imageView3 = findViewById(R.id.imageView3);
-//        textView = findViewById(R.id.textView);
-//        textView2 = findViewById(R.id.textView2);
-//
-//        imageView3.setAnimation(topAnim);
-//        textView.setAnimation(bottomAnim);
-//        textView2.setAnimation(bottomAnim);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_splash_page);
-        Animation fadeOut = new AlphaAnimation(1, 0);
-        fadeOut.setInterpolator(new AccelerateInterpolator());
-        fadeOut.setStartOffset(500);
-        fadeOut.setDuration(1800);
-        ImageView image = findViewById(R.id.imageView8);
-        image.setAnimation(fadeOut);
+        anim = findViewById(R.id.appName);
+        // start animations
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(SplashPage.this, HomePage.class);
-            startActivity(intent);
+            Intent splashintent = new Intent(SplashPage.this, HomePage.class);
+            startActivity(splashintent);
             finish();
-        }, SPLASH_SCREEN_TIMEOUT);
+        }, Splash_timeout);
+        // text animation
+        Animation myanimation = AnimationUtils.loadAnimation(SplashPage.this, R.anim.animation2);
+        anim.startAnimation(myanimation);
+        // Box animation
+        Animation myanimation2 = AnimationUtils.loadAnimation(SplashPage.this, R.anim.animation1);
+        anim.startAnimation(myanimation2);
     }
 }
