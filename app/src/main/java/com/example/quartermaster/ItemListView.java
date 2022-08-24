@@ -27,8 +27,6 @@ public class ItemListView extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_list_view);
         mItemViewBtn = findViewById(R.id.searchBtn);
@@ -43,13 +41,13 @@ public class ItemListView extends AppCompatActivity {
         mUID.setMovementMethod(new ScrollingMovementMethod());
         mUID.setTextIsSelectable(true);
 
-
+        // spinner setup
         ArrayAdapter<String> myAdapter = new ArrayAdapter<>(ItemListView.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.ListofItems));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSearchBar.setAdapter(myAdapter);
 
-
+        // filtering items based on ItemType
         mFilterBtn.setOnClickListener(v -> {
             String search = mSearchBar.getSelectedItem().toString().trim();
             mUID.setText("");
@@ -60,7 +58,7 @@ public class ItemListView extends AppCompatActivity {
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-
+                                // write in filtered data
                                 mUID.append("\n");
                                 mUID.append("ItemId: " + document.getId());
                                 mUID.append("\n");
@@ -78,7 +76,7 @@ public class ItemListView extends AppCompatActivity {
 
         });
 
-
+        // to item viewing
         mItemViewBtn.setOnClickListener(v -> {
             String Uid = mEnterId.getText().toString();
             if (TextUtils.isEmpty(Uid)) {
@@ -89,6 +87,7 @@ public class ItemListView extends AppCompatActivity {
             i.putExtra("Uid", Uid);
             startActivity(i);
         });
+        // to item creation
         mItemCreate.setOnClickListener(view -> {
             finish();
             Intent i = new Intent(getApplicationContext(), ItemCreate.class);

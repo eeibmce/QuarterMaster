@@ -37,6 +37,7 @@ public class ItemView extends AppCompatActivity {
             if (task.isSuccessful()) {
                 DocumentSnapshot document = task.getResult();
                 if (document.exists()) {
+                    // print in item info
                     mItemInfo.setText("");
                     mItemInfo.append("ItemId: " + document.getId());
                     mItemInfo.append("\n");
@@ -53,11 +54,13 @@ public class ItemView extends AppCompatActivity {
                 Toast.makeText(ItemView.this, "Does not exist, please check ID and try again", Toast.LENGTH_SHORT).show();
             }
         });
+        // to item editing
         mtoEditItemBtn.setOnClickListener(v -> {
             Intent i = new Intent(getApplicationContext(), ItemEdit.class);
             i.putExtra("Uid", Uid);
             startActivity(i);
         });
+        // to generate qr
         mtoQrActivityBtn.setOnClickListener(v -> {
             Intent i = new Intent(getApplicationContext(), QrActivity.class);
             i.putExtra("Uid", Uid);

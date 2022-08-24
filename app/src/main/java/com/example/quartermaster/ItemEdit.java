@@ -96,6 +96,7 @@ public class ItemEdit extends AppCompatActivity {
             String email = mEditOwnerEmail.getText().toString().trim();
             String extraInfo = mEditExtraInfo.getText().toString().trim();
             String repairStatus = mEditRepairStatus.getSelectedItem().toString();
+            // ensure email is there and in valid format
             if (TextUtils.isEmpty(email)) {
                 mEditOwnerEmail.setError("Email is Required.");
                 return;
@@ -122,9 +123,14 @@ public class ItemEdit extends AppCompatActivity {
                     })
                     .addOnFailureListener(e -> Toast.makeText(ItemEdit.this, "Item could not be added", Toast.LENGTH_SHORT).show());
         });
-        mEditBtn.setOnClickListener(v -> db.collection("Items").document("Uid")
+        // item deletion
+        mDeleteBtn.setOnClickListener(v -> db.collection("Items").document(Uid)
                 .delete()
-                .addOnSuccessListener(aVoid -> Toast.makeText(ItemEdit.this, "Item successfully Deleted", Toast.LENGTH_SHORT).show())
+                .addOnSuccessListener(documentReference -> {
+                    Toast.makeText(ItemEdit.this, "Item successfully Deleted", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(getApplicationContext(), HomePage.class);
+                    startActivity(i);
+                })
                 .addOnFailureListener(e -> Toast.makeText(ItemEdit.this, "Error Deleting Item", Toast.LENGTH_SHORT).show()));
 
 
