@@ -8,18 +8,19 @@
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".QrActivity">
+
+
     <ImageView
         android:id="@+id/logo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:contentDescription="@string/quartermaster_logo"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView"
         app:srcCompat="@drawable/newlogosimplewhite" />
-
 
     <EditText
         android:id="@+id/et_input"
@@ -39,7 +40,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:fontFamily="@font/ericsson"
         android:text="@string/app_name"
         android:textColor="#FFFFFF"
@@ -48,7 +48,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.10000" />
+        app:layout_constraintVertical_bias="0.1" />
 
     <Button
         android:id="@+id/bt_generate"
