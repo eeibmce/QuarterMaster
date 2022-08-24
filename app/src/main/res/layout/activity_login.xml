@@ -12,9 +12,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="320dp"
         android:autofillHints="firstname.lastname@ericsson.com"
         android:background="#2D2D2D"
         android:ems="10"
@@ -25,12 +24,10 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginTitle"
-        app:layout_constraintVertical_bias="0.35000002" />
+        app:layout_constraintTop_toBottomOf="@+id/loginTitle" />
 
     <EditText
         android:id="@+id/Password"
@@ -39,7 +36,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:autofillHints="Password"
         android:background="#2D2D2D"
         android:ems="10"
@@ -50,29 +46,26 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
 
     <TextView
 
         android:id="@+id/loginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/ericsson"
         android:text="@string/login_page"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352" />
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
 
     <Button
         android:id="@+id/LoginBtn"
@@ -92,7 +85,7 @@
         android:id="@+id/toRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="@string/new_here_create_an_account"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +96,7 @@
         android:id="@+id/toPasswordReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:text="@string/forgot_password"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,33 +105,31 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="112dp"
-        android:layout_height="112dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/quartermaster_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/newlogosimplewhite" />
 
     <TextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/full_name"
         android:fontFamily="@font/ericsson"
         android:text="@string/app_name"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.219" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
     <!--        app:srcCompat="@drawable/quartermaster" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
