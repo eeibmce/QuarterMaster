@@ -16,7 +16,7 @@
         android:layout_marginEnd="96dp"
         android:layout_marginBottom="74dp"
         android:contentDescription="@string/quartermaster_logo"
-        android:src="@drawable/fixedlogotest"
+        android:src="@drawable/fixedlogotestremovebg"
         app:layout_constraintBottom_toTopOf="@+id/appName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
